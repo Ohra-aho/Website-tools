@@ -1,0 +1,40 @@
+@use "./utils.scss" as *;
+
+grid_display {
+	width: 100%;
+	height: fit-content;
+	background-color: gray;
+
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 20% 20% 20%;
+	grid-template-rows: 50vh;
+
+}
+
+card {
+	background-color: rgb(185, 185, 185);
+	border-radius: 10px;
+	margin: 5px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	img {
+		height: 50%;
+		width: auto;
+	}
+
+	content {
+		width: 90%;
+		height: 45%;
+		background-color: white;
+		border-radius: 5px;
+		padding: 5px;
+
+		h3 {
+			border-bottom: 2px solid rgb(185, 185, 185);
+		}
+	}
+}

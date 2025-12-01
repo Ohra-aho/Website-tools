@@ -1,0 +1,34 @@
+@use "./utils.scss" as *;
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 7vh;
+	background-color: black;
+	@include symmetric_padding(5px, "y");
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	//logo
+	.logo {
+		height: 100%;
+		width: auto;
+	}
+
+	//Links
+	header_links {
+		display: flex;
+		justify-content: space-evenly;
+
+		width: fit-content;
+		height: fit-content;
+		@include symmetric_padding(10px, "x");
+
+		a {
+			@include symmetric_margin();
+		}
+	}
+}
