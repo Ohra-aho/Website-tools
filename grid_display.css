@@ -5,8 +5,8 @@ grid_display {
   background-color: gray;
   display: grid;
   justify-content: center;
-  grid-template-columns: 20% 20% 20%;
-  grid-template-rows: 50vh;
+  grid-template-columns: repeat(3, 20%);
+  grid-template-rows: repeat(1, 100%);
 }
 
 card {
@@ -30,4 +30,24 @@ card content {
 }
 card content h3 {
   border-bottom: 2px solid rgb(185, 185, 185);
+}
+
+text_card {
+  background-color: rgb(185, 185, 185);
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+text_card h2 {
+  width: 95%;
+  border-bottom: 2px solid white;
+  margin: 5px;
+  font-size: 3em;
+  text-align: center;
+}
+text_card p {
+  width: 90%;
+  margin: 5px;
 }/*# sourceMappingURL=grid_display.css.map */

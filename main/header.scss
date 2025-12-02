@@ -1,4 +1,4 @@
-@use "./utils.scss" as *;
+@use "../utils.scss" as *;
 
 header {
 	position: fixed;
@@ -16,6 +16,7 @@ header {
 	.logo {
 		height: 100%;
 		width: auto;
+		margin-left: 10%;
 	}
 
 	//Links
@@ -23,12 +24,18 @@ header {
 		display: flex;
 		justify-content: space-evenly;
 
-		width: fit-content;
+		width: 30%;
 		height: fit-content;
 		@include symmetric_padding(10px, "x");
 
 		a {
+			width: 10%;
 			@include symmetric_margin();
+			color: white;
+			text-decoration: none;
+			border-right: 2px solid white;
+			border-radius: 5px;
+			padding: 2px;
 		}
 	}
 }

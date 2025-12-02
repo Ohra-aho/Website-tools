@@ -16,3 +16,10 @@
 		margin: $margin 0 $margin 0;
 	}
 }
+
+@mixin grid_creator($cell_x: 30%, $cell_y: 30%, $rows: 3, $columns: 3) {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat($columns, $cell_x);
+	grid-template-rows: repeat($rows, $cell_y);
+}
