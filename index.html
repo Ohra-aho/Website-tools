@@ -5,90 +5,80 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Website tools</title>
 
+	<script defer src="./utils.js"></script>
+
 	<link rel="stylesheet" href="./main/body.css">
 	<link rel="stylesheet" href="./main/separator.css">
-	<link rel="stylesheet" href="./main/header.css">
-	<link rel="stylesheet" href="./main/footer.css">
+	<link rel="stylesheet" href="./main/main_container.css">
+	<link rel="stylesheet" href="./main/footer/footer.css">
 
 	<link rel="stylesheet" href="title_screen.css">
 	<link rel="stylesheet" href="grid_display.css">
 	<link rel="stylesheet" href="image_rack.css">
-	<link rel="stylesheet" href="popups.css">
+	<link rel="stylesheet" href="./popups/popups.css">
 
-
+	<script defer src="./main/header/header.js"></script>
+	<script defer src="./popups/sidebar.js"></script>
+	<script type="module" src="./main/footer/footer.js"></script>
 </head>
 <body>
 	<background>
 		<img src="./media/images/body/placeholder_background.png" alt="back">
 	</background>
+	<header-fixed 
+		logo="./media/images/header/placeholder_logo.png"
+		links="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu, https://hikipedia.info/wiki/Etusivu"
+		link_names="Wiki, Hiki"
+	>Mertamies</header-fixed>
 
-	<header>
-		<img src="./media/images/header/placeholder_logo.png" alt="logo" class="logo">
-		<!-- Olisi siistiä, jos tämä täyttyisi sen mukaan mitä subsivuja on -->
-		<header_links>
-			<a href="">Link</a>
-			<a href="">Link</a>
-			<a href="">Link</a>
-			<a href="">Link</a>
-			<a href="">Link</a>
-		</header_links>
-	</header>
-
-	<sidebar>
-		<button id="open_side">
-			<p>S</p>
-			<p>i</p>
-			<p>d</p>
-			<p>e</p>
-			<p>b</p>
-			<p>a</p>
-			<p>r</p>
-		</button>
-		<content>
-			<img src="./media/images/header/placeholder_logo.png" alt="image">
-
-			<h1>Sidebar</h1>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-				Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-				nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-			</p>
-			<a href="">More &#8594;</a>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-				Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-				nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-				Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-				nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-			</p>
-			<br>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-				Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-				nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-			</p>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-				Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-				nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-				Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-				nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-			</p>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-				Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-				nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-				Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-				nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-			</p>
-		</content>
-	</sidebar>
+	<sidebar-fixed
+		main_title="Nothing"
+		class="right"
+		id="temp"
+	>
+		<img src="./media/images/header/placeholder_logo.png" alt="image">
+		<h1>Sidebar</h1>
+		<p>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
+			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
+		</p>
+		<a href="">More &#8594;</a>
+		<p>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
+			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
+			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
+		</p>
+		<br>
+		<p>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
+			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
+		</p>
+		<p>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
+			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
+			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
+		</p>
+		<p>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
+			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
+			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
+		</p>
+	</sidebar-fixed>
+	
 
 	<main_container>
-
+<!--
 		<title_screen>
 			<title_image>
 				<overlay>
@@ -174,7 +164,7 @@
 		</image_displayer>
 
 		<div class="separator"></div>
-
+	-->
 	</main_container>
 
 	<footer>
@@ -197,6 +187,7 @@
 			<a href="">Link</a><br>
 			<a href="">Link</a><br>
 		</div>
+		<footer-list></footer-list>
 	</footer>
 	<copyright>
 		<p>Copyright No-one. All rights reserved.</p>
