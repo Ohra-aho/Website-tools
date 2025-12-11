@@ -7,6 +7,6 @@ header {
   min-height: 7vh;
   background-color: black;
   color: white;
-  z-index: 2;
+  z-index: 1;
   padding: 5px 0 5px 0;
 }/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,71 @@
+row {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+row p {
+  color: white;
+  width: 20vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 5px;
+}
+
+column {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+column p {
+  width: 20vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+  margin: 5px;
+}
+
+grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, 30%);
+}
+grid div {
+  width: auto;
+  height: auto;
+  background-color: rgb(148, 148, 148);
+  margin: 5px;
+}
+
+custom_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  row {
+    flex-direction: column;
+  }
+  row.static {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1030px) {
+  row {
+    flex-direction: column;
+  }
+  row.static {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=row_column.css.map */

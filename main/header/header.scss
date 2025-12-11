@@ -10,7 +10,7 @@ header {
 	min-height: 7vh;
 	background-color: $main_color;
 	color: $secondary_color;
-	z-index: 2;
+	z-index: 1;
 	@include symmetric_padding(5px, "y");
 }
 

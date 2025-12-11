@@ -3,7 +3,7 @@ sidebar_base.innerHTML =
 `
 <sidebar>
 	<link rel="stylesheet" href="./popups/popups.css"></link>
-	<button id="open_side" onclick="ToggleSideBar()"></button>
+	<button id="open_side" onclick="ToggleSideBar(this)"></button>
 	<content>
 		
 	</content>
@@ -37,10 +37,9 @@ customElements.define("sidebar-fixed", SideBar);
 
 //Interaction functions
 
-function ToggleSideBar() {
-	console.log("Que");
-	let sidebar = document.getElementById("temp");
-	sidebar.classList.toggle("open");
+function ToggleSideBar(btn) {
+	let sidebar = btn.parentElement;
+	sidebar.parentElement.classList.toggle("open");
 }
 
 //target: class to be worked with

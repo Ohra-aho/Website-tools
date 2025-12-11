@@ -8,11 +8,16 @@
 	<script defer src="./utils.js"></script>
 
 	<link rel="stylesheet" href="./main/body.css">
-	<link rel="stylesheet" href="./main/separator.css">
-	<link rel="stylesheet" href="./main/main_container.css">
+	<link rel="stylesheet" href="./main/container/separator.css">
+	<link rel="stylesheet" href="./main/container/main_container.css">
 	<link rel="stylesheet" href="./main/footer/footer.css">
 	<link rel="stylesheet" href="./main/header/header.css">
-	<link rel="stylesheet" href="./main/section.css">
+	<link rel="stylesheet" href="./main/container/section.css">
+
+	<link rel="stylesheet" href="./adjusting/row_column.css">
+
+	<link rel="stylesheet" href="./content/text_column/text_column.css">
+
 
 	<link rel="stylesheet" href="title_screen.css">
 	<link rel="stylesheet" href="grid_display.css">
@@ -22,6 +27,7 @@
 	<script defer src="./main/header/header.js"></script>
 	<script defer src="./popups/sidebar.js"></script>
 	<script src="./main/footer/footer.js"></script>
+	<script src="./content/text_column/text_column.js"></script>
 </head>
 <body>
 	<background>
@@ -33,7 +39,6 @@
 	<sidebar-fixed
 		main_title="Nothing"
 		class="right"
-		id="temp"
 	></sidebar-fixed>
 
 	<!--
@@ -44,27 +49,134 @@
 	
 	<main_container>
 		<section>
-			<div>
-				<p style="margin: 10px;">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-					Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
-					Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
-					Excepturi quo repellat consequatur nisi.
-				</p>
-				<p style="margin: 10px;">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-					Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
-					Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
-					Excepturi quo repellat consequatur nisi.
-				</p>
-			</div>
+			<custom_center>
+				<div style="width: 50vw; height: 60vh;">
+					<text-column class="scrollable">
+						<h1>Title</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis.
+						</p>
+						<p>
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						</p>
+						<p>
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						</p>
+						<p>
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.
+						</p>
+					</text-column>
+				</div>
+			</custom_center>
 		</section>
 		<separator></separator>
 		<section>
-			<div style="height: 50vh;
-						background-color: rgb(129, 129, 129);
-						width: 100%;">
-			</div>
+			<div style="width: 100vw; height: 60vh;">
+				<custom_center>
+					<row>
+						<p style="margin: 10px;">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.
+						</p>
+						<p style="margin: 10px;">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.
+						</p>
+						<p style="margin: 10px;">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.
+						</p>
+					</row>
+					<column>
+						<p style="margin: 10px;">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.
+						</p>
+						<p style="margin: 10px;">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.
+						</p>
+						<p style="margin: 10px;">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+							Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+							Excepturi quo repellat consequatur nisi.
+						</p>
+					</column>
+				</custom_center>
+			</div> 
+		</section>
+		<separator></separator>
+		<section>
+			<grid style="width: 100vw; height: 50vh;">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</grid>
 		</section>
 		<separator></separator>
 	</main_container>

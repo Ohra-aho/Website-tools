@@ -1,0 +1,76 @@
+@use "../utils.scss" as *;
+@use "../colors.scss" as *;
+
+row {
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	p {
+		color: white;
+		width: 20vw;
+		height: fit-content;
+		margin: 5px;
+	}
+}
+
+column {
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	p {
+		width: 20vw;
+		height: fit-content;
+		color: white;
+		margin: 5px;
+	}
+}
+
+grid {
+	@include grid_creator();
+	div {
+		width: auto;
+		height: auto;
+		background-color: $highlight_color;
+		margin: 5px;
+	}
+}
+
+custom_center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+//narrow screen
+@media screen and (max-width: $narrow) {
+	row {
+		flex-direction: column;
+	}
+	row.static {
+		flex-direction: row;
+	}
+}
+
+//medium screen
+@media screen and (min-width: $narrow) and (max-width: $medium) {
+	row {
+		flex-direction: column;
+	}
+	row.static {
+		flex-direction: row;
+	}
+}
+
+//wide screen
+@media screen and (min-width: $medium) and (max-width: $wide) {
+	
+}

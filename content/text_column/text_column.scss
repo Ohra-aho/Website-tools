@@ -1,0 +1,14 @@
+@use "../../utils.scss" as *;
+@use "../../colors.scss" as *;
+
+text-column {
+	display: block;
+	width: 98%;
+	height: fit-content;
+	@include symmetric_padding(1%, "x");
+}
+
+text-column.scrollable {
+	height: 100%;
+	overflow-y: scroll;
+}
