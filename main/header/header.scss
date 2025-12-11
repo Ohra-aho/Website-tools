@@ -13,3 +13,17 @@ header {
 	z-index: 2;
 	@include symmetric_padding(5px, "y");
 }
+
+//narrow screen
+@media screen and (max-width: $narrow) {
+	
+}
+
+//medium screen
+@media screen and (min-width: $narrow) and (max-width: $medium) {
+
+}
+
+@media screen and (min-width: $medium) and (max-width: $wide) {
+
+}

@@ -26,7 +26,7 @@ customElements.define("footer-list", FooterList);
 //target: class to be worked with
 //name: tag in which true content needs to be pasted
 //template: template to be pasted into the class
-export function PlaceTrueContent(target, template, name) {
+function PlaceTrueContent(target, template, name) {
 	const content = target.innerHTML;
 	target.innerHTML = "";
 	let temp = template.content.cloneNode(true)

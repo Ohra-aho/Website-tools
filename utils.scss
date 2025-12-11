@@ -1,3 +1,7 @@
+$narrow: 500px;
+$medium: 1030px;
+$wide: 1500px;
+
 
 @mixin symmetric_padding($padding: 5px, $direction: "x") {
 	@if($direction == "x") {
@@ -22,4 +26,24 @@
 	justify-content: center;
 	grid-template-columns: repeat($columns, $cell_x);
 	grid-template-rows: repeat($rows, $cell_y);
+}
+
+@mixin font_controller($bf: 1.1em, $nf: 1em, $mf: 1em, $wf: 1em) {
+
+	font-size: $bf;
+
+	//narrow screen
+	@media screen and (max-width: $narrow) {
+		font-size: $nf;
+	}
+
+	//medium screen
+	@media screen and (min-width: $narrow) and (max-width: $medium) {
+		font-size: $mf;
+	}
+
+	//wide screen
+	@media screen and (min-width: $medium) and (max-width: $wide) {
+		font-size: $wf;
+	}
 }

@@ -3,8 +3,7 @@ sidebar-fixed {
   width: 20vw;
   height: 100vh;
   position: fixed;
-  background-color: rgb(180, 180, 180);
-  padding: 1vw;
+  background-color: rgb(148, 148, 148);
   z-index: 1;
 }
 sidebar-fixed sidebar {
@@ -18,7 +17,6 @@ sidebar-fixed sidebar button {
   height: -moz-fit-content;
   height: fit-content;
   position: absolute;
-  left: -25px;
   top: 10vh;
   padding: 0;
 }
@@ -38,16 +36,19 @@ content::-webkit-scrollbar {
 }
 
 .right {
-  right: -22vw;
+  right: -20vw;
   transition: right 1s;
+}
+.right sidebar button {
+  left: -25px;
 }
 
 .left {
-  left: -22vw;
+  left: -20vw;
   transition: left 1s;
 }
 .left sidebar button {
-  left: 22vw;
+  right: -25px;
 }
 
 .right.open {
@@ -66,4 +67,68 @@ popup {
   width: 100vw;
   position: fixed;
   z-index: 3;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 500px) {
+  sidebar-fixed {
+    width: 100vw;
+  }
+  .right {
+    right: -100vw;
+  }
+  .right sidebar button {
+    transition: left 1s;
+  }
+  .left {
+    left: -100vw;
+  }
+  .left sidebar button {
+    right: -25px;
+    transition: right 1s;
+  }
+  .right.open sidebar button {
+    left: 0;
+    transition: left 1s;
+  }
+  .left.open sidebar button {
+    right: 0;
+    transition: right 1s;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1030px) {
+  sidebar-fixed {
+    width: 30vw;
+  }
+  .right {
+    right: -30vw;
+  }
+  .right sidebar button {
+    transition: left 1s;
+  }
+  .left {
+    left: -30vw;
+  }
+  .left sidebar button {
+    right: 25px;
+    transition: right 1s;
+  }
+}
+@media screen and (min-width: 1030px) and (max-width: 1500px) {
+  sidebar-fixed {
+    width: 30vw;
+  }
+  .right {
+    right: -30vw;
+  }
+  .right sidebar button {
+    transition: left 1s;
+  }
+  .left {
+    left: -30vw;
+  }
+  .left sidebar button {
+    right: 25px;
+    transition: right 1s;
+  }
 }/*# sourceMappingURL=popups.css.map */

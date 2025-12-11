@@ -1,6 +1,8 @@
 @use "../utils.scss" as *;
 
 main_container {
+	position: relative;
+	top: 7vh;
 	display: block;
 	width: 100vw;
 	height: fit-content;

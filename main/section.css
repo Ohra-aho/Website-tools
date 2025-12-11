@@ -1,0 +1,28 @@
+section {
+  display: block;
+  background-color: black;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+section div {
+  font-size: 1.1em;
+  height: 100vh;
+  background-color: rgb(129, 129, 129);
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  section div {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1030px) {
+  section div {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1030px) and (max-width: 1500px) {
+  section div {
+    font-size: 1em;
+  }
+}/*# sourceMappingURL=section.css.map */

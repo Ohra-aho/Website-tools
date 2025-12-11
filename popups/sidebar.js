@@ -38,6 +38,7 @@ customElements.define("sidebar-fixed", SideBar);
 //Interaction functions
 
 function ToggleSideBar() {
+	console.log("Que");
 	let sidebar = document.getElementById("temp");
 	sidebar.classList.toggle("open");
 }
