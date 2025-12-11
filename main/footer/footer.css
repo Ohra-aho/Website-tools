@@ -1,34 +1,22 @@
 footer {
-  width: 100%;
+  position: relative;
+  width: 100vw;
   height: -moz-fit-content;
   height: fit-content;
+  min-height: 10vh;
   background-color: black;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(3, 30%);
-  grid-template-rows: repeat(1, 90%);
   color: white;
 }
-footer div {
-  margin: 5px;
-}
-footer div h3 {
-  border-bottom: 1px solid white;
-}
-footer div a {
-  color: white;
-  text-decoration: none;
-}
-
-copyright {
+footer copyright {
+  position: absolute;
+  bottom: 0;
   height: -moz-fit-content;
   height: fit-content;
-  color: white;
+  width: 100%;
 }
-copyright p {
+footer copyright p {
   border-top: 1px solid white;
   width: 100%;
-  background-color: black;
   margin: 0;
   padding: 5px 0 5px 0;
   text-align: center;

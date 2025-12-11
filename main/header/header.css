@@ -1,49 +1,12 @@
-header-fixed {
-  display: block;
-  width: 100vw;
-}
-header-fixed header {
+header {
   position: fixed;
   top: 0;
   width: 100vw;
-  height: 7vh;
-  background-color: black;
-  padding: 5px 0 5px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header-fixed header title_holder {
-  display: flex;
-  height: 100%;
-  width: -moz-fit-content;
-  width: fit-content;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10%;
-}
-header-fixed header title_holder .logo {
-  height: 100%;
-  width: auto;
-}
-header-fixed header title_holder h1 {
-  color: white;
-  margin-left: 20px;
-}
-header-fixed header header_links {
-  display: flex;
-  justify-content: space-evenly;
-  width: 30%;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 0 10px 0 10px;
-}
-header-fixed header header_links a {
-  width: 10%;
-  margin: 0 5px 0 5px;
+  min-height: 7vh;
+  background-color: black;
   color: white;
-  text-decoration: none;
-  border-right: 2px solid white;
-  border-radius: 5px;
-  padding: 2px;
+  z-index: 2;
+  padding: 5px 0 5px 0;
 }/*# sourceMappingURL=header.css.map */

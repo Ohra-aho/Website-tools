@@ -1,58 +1,15 @@
-@use "../utils.scss" as *;
+@use "../../utils.scss" as *;
+@use "../../colors.scss" as *;
 
-header-fixed {
-	display: block;
+
+header {
+	position: fixed;
+	top: 0;
 	width: 100vw;
-	header {
-		position: fixed;
-		top: 0;
-		width: 100vw;
-		height: 7vh;
-		background-color: black;
-		@include symmetric_padding(5px, "y");
-
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		//logo
-		title_holder {
-			display: flex;
-			height: 100%;
-			width: fit-content;
-			align-items: center;
-			justify-content: center;
-			margin-left: 10%;
-
-			.logo {
-				height: 100%;
-				width: auto;
-			}
-
-			h1 {
-				color: white;
-				margin-left: 20px;
-			}
-		}
-
-		//Links
-		header_links {
-			display: flex;
-			justify-content: space-evenly;
-
-			width: 30%;
-			height: fit-content;
-			@include symmetric_padding(10px, "x");
-
-			a {
-				width: 10%;
-				@include symmetric_margin();
-				color: white;
-				text-decoration: none;
-				border-right: 2px solid white;
-				border-radius: 5px;
-				padding: 2px;
-			}
-		}
-	}
+	height: fit-content;
+	min-height: 7vh;
+	background-color: $main_color;
+	color: $secondary_color;
+	z-index: 2;
+	@include symmetric_padding(5px, "y");
 }

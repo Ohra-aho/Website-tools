@@ -1,6 +1,7 @@
 @use "../utils.scss" as *;
 
-.separator {
+separator {
+	display: block;
 	height: 10vh;
 	width: 100%;
 }

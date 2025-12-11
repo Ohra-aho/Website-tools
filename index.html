@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="./main/separator.css">
 	<link rel="stylesheet" href="./main/main_container.css">
 	<link rel="stylesheet" href="./main/footer/footer.css">
+	<link rel="stylesheet" href="./main/header/header.css">
 
 	<link rel="stylesheet" href="title_screen.css">
 	<link rel="stylesheet" href="grid_display.css">
@@ -19,178 +20,47 @@
 
 	<script defer src="./main/header/header.js"></script>
 	<script defer src="./popups/sidebar.js"></script>
-	<script type="module" src="./main/footer/footer.js"></script>
+	<script src="./main/footer/footer.js"></script>
 </head>
 <body>
 	<background>
 		<img src="./media/images/body/placeholder_background.png" alt="back">
 	</background>
-	<header-fixed 
-		logo="./media/images/header/placeholder_logo.png"
-		links="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu, https://hikipedia.info/wiki/Etusivu"
-		link_names="Wiki, Hiki"
-	>Mertamies</header-fixed>
+
+	<header></header>
 
 	<sidebar-fixed
 		main_title="Nothing"
 		class="right"
 		id="temp"
-	>
-		<img src="./media/images/header/placeholder_logo.png" alt="image">
-		<h1>Sidebar</h1>
-		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-		</p>
-		<a href="">More &#8594;</a>
-		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-		</p>
-		<br>
-		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-		</p>
-		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-		</p>
-		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-			nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-		</p>
-	</sidebar-fixed>
+	></sidebar-fixed>
+
+	<popup>
+		<div style="width: 100px; height: 100px; background-color: brown; position: absolute; left: 50%; top: 50%;"></div>
+	</popup>
 	
-
 	<main_container>
-<!--
-		<title_screen>
-			<title_image>
-				<overlay>
-					<h1>All your website needs</h1>
-				</overlay>
-			</title_image>
-			<underlay>
-				<h2>But not yet, no</h2>
-			</underlay>
-		</title_screen>
-
-		<div class="separator"></div>
-		
-		<grid_display>
-
-			<card>
-				<img src="./media/images/grid/placeholder_card_image.png" alt="card">
-				<content>
-					<h3>Title</h3>
-					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-						nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-					</p>
-				</content>
-			</card>
-			<text_card>
-				<h2>Title</h2>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-					nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-				</p>
-				<br>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-					nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-				</p>
-			</text_card>
-			<card>
-				<img src="./media/images/grid/placeholder_card_image.png" alt="card">
-				<content>
-					<h3>Title</h3>
-					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Excepturi debitis magnam unde nemo perspiciatis dicta reprehenderit, 
-						nisi molestias eaque at veniam autem quasi ad vero fugit explicabo eveniet facilis aut!
-					</p>
-				</content>
-			</card>
-		</grid_display>
-
-		<div class="separator"></div>
-		
-		<image_displayer>
-
-			<main_display>
-				<img src="./media/images/image rack/rack_1.png" alt="image">
-			</main_display>
-
-			<image_rack>
-				<button>&#8592;</button>
-				<rack>
-					<div>
-						<img src="./media/images/image rack/rack_1.png" alt="image">
-					</div>
-					<div>
-						<img src="./media/images/image rack/rack_2.png" alt="image">
-					</div>
-					<div>
-						<img src="./media/images/image rack/rack_3.png" alt="image">
-					</div>
-					<div>
-						<img src="./media/images/image rack/rack_4.png" alt="image">
-					</div>
-					<div>
-						<img src="./media/images/image rack/rack_5.png" alt="image">
-					</div>
-				</rack>
-				<button>&#8594;</button>
-			</image_rack>
-		</image_displayer>
-
-		<div class="separator"></div>
-	-->
+		<section>
+			<div style="height: 100vh;
+						background-color: rgb(129, 129, 129);
+						width: 100%;">
+			</div>
+		</section>
+		<separator></separator>
+		<section>
+			<div style="height: 50vh;
+						background-color: rgb(129, 129, 129);
+						width: 100%;">
+			</div>
+		</section>
+		<separator></separator>
 	</main_container>
 
 	<footer>
-		<div>
-			<h3>Contact info</h3>
-			<p>someone.some@email.com</p>
-			<p>someone.some@email.com</p>
-			<p>someone.some@email.com</p>
-			<p>someone.some@email.com</p>
-		</div>
-		<div>
-			<h3>Links</h3>
-			<a href="">Link</a><br>
-			<a href="">Link</a><br>
-			<a href="">Link</a><br>
-		</div>
-		<div>
-			<h3>Social media</h3>
-			<a href="">Link</a><br>
-			<a href="">Link</a><br>
-			<a href="">Link</a><br>
-		</div>
-		<footer-list></footer-list>
+		
+		<copyright>
+			<p>Copyright No-one. All rights reserved.</p>
+		</copyright>
 	</footer>
-	<copyright>
-		<p>Copyright No-one. All rights reserved.</p>
-	</copyright>
 </body>
 </html>

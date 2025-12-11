@@ -5,6 +5,7 @@ sidebar-fixed {
   position: fixed;
   background-color: rgb(180, 180, 180);
   padding: 1vw;
+  z-index: 1;
 }
 sidebar-fixed sidebar {
   display: block;
@@ -30,20 +31,6 @@ sidebar-fixed sidebar content {
   height: 100%;
   width: 100%;
   overflow-y: scroll;
-}
-sidebar-fixed sidebar content img {
-  width: 70%;
-  height: auto;
-  margin-left: 15%;
-}
-sidebar-fixed sidebar content h1 {
-  border-bottom: 2px solid white;
-}
-sidebar-fixed sidebar content a {
-  color: black;
-  text-decoration: none;
-  position: relative;
-  left: 80%;
 }
 
 content::-webkit-scrollbar {
@@ -71,4 +58,12 @@ content::-webkit-scrollbar {
 .left.open {
   left: 0;
   transition: left 1s;
+}
+
+popup {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 3;
 }/*# sourceMappingURL=popups.css.map */
