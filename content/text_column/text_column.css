@@ -9,4 +9,8 @@ text-column {
 text-column.scrollable {
   height: 100%;
   overflow-y: scroll;
+}
+
+text-column.scrollable::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=text_column.css.map */
