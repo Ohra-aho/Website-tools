@@ -1,0 +1,33 @@
+media-displayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 500px;
+  border: 2px solid white;
+}
+media-displayer img {
+  width: 100%;
+  height: auto;
+}
+media-displayer video {
+  width: 100%;
+  height: auto;
+}
+
+media-displayer:hover {
+  border: 2px solid rgb(148, 148, 148);
+}
+
+media-displayer.vertical {
+  width: 500px;
+  height: 300px;
+}
+media-displayer.vertical img {
+  width: auto;
+  height: 100%;
+}
+media-displayer.vertical video {
+  width: auto;
+  height: 100%;
+}/*# sourceMappingURL=media_displayer.css.map */

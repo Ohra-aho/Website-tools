@@ -1,0 +1,42 @@
+@use "../../utils.scss" as *;
+@use "../../colors.scss" as *;
+
+media-displayer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 300px;
+	height: 500px;
+
+	border: 2px solid $secondary_color;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	video {
+		width: 100%;
+		height: auto;
+	}
+}
+
+media-displayer:hover {
+	border: 2px solid $highlight_color;
+}
+
+media-displayer.vertical {
+	width: 500px;
+	height: 300px;
+
+	img {
+		width: auto;
+		height: 100%;
+	}
+
+	video {
+		width: auto;
+		height: 100%;
+	}
+}

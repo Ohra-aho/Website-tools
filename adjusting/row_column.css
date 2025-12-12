@@ -28,13 +28,7 @@ grid {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 30%);
-  grid-template-rows: repeat(3, 30%);
-}
-grid div {
-  width: auto;
-  height: auto;
-  background-color: rgb(148, 148, 148);
-  margin: 5px;
+  grid-template-rows: repeat(3, fit-content);
 }
 
 custom_center {

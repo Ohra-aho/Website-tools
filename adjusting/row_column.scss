@@ -24,13 +24,7 @@ column {
 }
 
 grid {
-	@include grid_creator();
-	div {
-		width: auto;
-		height: auto;
-		background-color: $highlight_color;
-		margin: 5px;
-	}
+	@include grid_creator($cell_y: fit-content);
 }
 
 custom_center {
