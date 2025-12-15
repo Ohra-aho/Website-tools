@@ -54,4 +54,18 @@ full-screen-media fc-media button {
   position: absolute;
   right: 50px;
   top: 50px;
+}
+full-screen-media fc-media #back {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  width: 30px;
+  height: 100px;
+}
+full-screen-media fc-media #forward {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  width: 30px;
+  height: 100px;
 }/*# sourceMappingURL=media_displayer.css.map */
