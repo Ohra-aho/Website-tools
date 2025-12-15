@@ -27,6 +27,18 @@ grid {
 	@include grid_creator($cell_y: fit-content);
 }
 
+grid-generator {
+	display: grid;
+	justify-content: start;
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: transparent;
+		margin: 5px;
+	}
+}
+
 custom_center {
 	display: flex;
 	align-items: center;

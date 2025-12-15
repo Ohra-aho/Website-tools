@@ -9,6 +9,9 @@ class MediaDisplayer extends HTMLElement {
 	connectedCallback() {
 		const media = this.getAttribute("media");
 		const image = this.getAttribute("image"); //If media is image or not
+		if(this.children.length > 0) {
+			this.children[0].remove();
+		}
 		if(image) {
 			let content = document.createElement("img");
 			content.setAttribute("src", media);

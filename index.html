@@ -31,6 +31,7 @@
 	<script defer src="./content/text_column/text_column.js"></script>
 	<script defer src="./content/card/card.js"></script>
 	<script defer src="./content/media_displayer/media_displayer.js"></script>
+	<script defer src="./adjusting/grid.js"></script>
 </head>
 <body>
 	<background>
@@ -147,9 +148,15 @@
 		</section>
 		<separator></separator>
 		<section>
-			<grid>
-				<media-displayer onclick="" class="vertical" media="./media/images/image rack/rack_1.png" image="true"></media-displayer>
-			</grid>
+			<custom_center>
+				<grid-generator height="20vh" width="fit-content">
+					<media-displayer image="true" media="./media/images/image rack/rack_1.png" class="vertical"></media-displayer>
+					<media-displayer image="true" media="./media/images/image rack/rack_2.png" class="vertical"></media-displayer>
+					<media-displayer image="true" media="./media/images/image rack/rack_3.png" class="vertical"></media-displayer>
+					<media-displayer image="true" media="./media/images/image rack/rack_4.png" class="vertical"></media-displayer>
+					<media-displayer image="true" media="./media/images/image rack/rack_5.png" class="vertical"></media-displayer>
+				</grid-generator>
+			</custom_center>
 		</section>
 		<separator></separator>
 	</main_container>

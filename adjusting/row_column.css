@@ -31,6 +31,18 @@ grid {
   grid-template-rows: repeat(3, fit-content);
 }
 
+grid-generator {
+  display: grid;
+  justify-content: start;
+}
+grid-generator div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  margin: 5px;
+}
+
 custom_center {
   display: flex;
   align-items: center;
