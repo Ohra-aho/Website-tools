@@ -30,6 +30,7 @@
 	<script defer src="./main/footer/footer.js"></script>
 	<script defer src="./content/text_column/text_column.js"></script>
 	<script defer src="./content/card/card.js"></script>
+	<script defer src="./content/media_displayer/media_displayer.js"></script>
 </head>
 <body>
 	<background>
@@ -42,6 +43,11 @@
 		main_title="Nothing"
 		class="right"
 	></sidebar-fixed>
+
+	<!--
+	<full-screen-media media="media/images/image rack/rack_5.png" image="true">
+	</full-screen-media>
+	-->
 
 	<!--
 	<popup>
@@ -142,21 +148,7 @@
 		<separator></separator>
 		<section>
 			<grid>
-				<media-displayer onclick="" class="vertical">
-					<img src="./media/images/image rack/rack_1.png" alt="media">
-				</media-displayer>
-				<media-displayer onclick="">
-					<img src="./media/images/image rack/rack_1.png" alt="media">
-				</media-displayer>
-				<media-displayer onclick="" class="vertical">
-					<img src="./media/images/image rack/rack_1.png" alt="media">
-				</media-displayer>
-				<media-displayer onclick="">
-					<img src="./media/images/image rack/rack_1.png" alt="media">
-				</media-displayer>
-				<media-displayer onclick="" class="vertical">
-					<img src="./media/images/image rack/rack_1.png" alt="media">
-				</media-displayer>
+				<media-displayer onclick="" class="vertical" media="./media/images/image rack/rack_1.png" image="true"></media-displayer>
 			</grid>
 		</section>
 		<separator></separator>
@@ -184,6 +176,14 @@
 			</p>
 		</content>
 	</card>
+</template>
+
+<template id="sc-media-template">
+	<fc-media>
+		<button>&#x2715;</button>
+		<custom_center>
+		</custom_center>
+	</fc-media>
 </template>
 
 </html>
