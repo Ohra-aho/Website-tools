@@ -1,9 +1,7 @@
 @use "../../utils.scss" as *;
 @use "../../colors.scss" as *;
 
-
-header {
-	position: fixed;
+@mixin header_base() {
 	top: 0;
 	width: 100vw;
 	height: fit-content;
@@ -12,6 +10,43 @@ header {
 	color: $secondary_color;
 	z-index: 1;
 	@include symmetric_padding(5px, "y");
+}
+
+header {
+	position: fixed;
+	@include header_base();
+}
+
+header.top {
+	position: relative;
+}
+
+sticky-header {
+	display: block;
+	position: sticky;
+	transition: top 1s;
+	@include header_base();
+
+	button {
+		position: absolute;
+		left: 48%;
+		bottom: -20px;
+		width: 2%;
+		height: 20px;
+		min-width: 40px;
+
+		background-color: rgba(black, 0.5);
+		border: none;
+		outline: none;
+		border-radius: 0 0 5px 5px;
+
+		color: white;
+	}
+}
+
+sticky-header.open {
+	top: 0;
+	transition: top 1s;
 }
 
 //narrow screen
@@ -24,6 +59,7 @@ header {
 
 }
 
+//wide screen
 @media screen and (min-width: $medium) and (max-width: $wide) {
 
 }

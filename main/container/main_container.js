@@ -11,8 +11,16 @@ class MainContainer extends HTMLElement {
 
 	AdjustTopForHeader() {
 		const headers = document.getElementsByTagName("header");
-		const header = headers[0];
-		this.style.top = `${header.offsetHeight-1}px`;
+		let header = null;
+		if(headers.length > 0) {
+			header = headers[0];
+		}
+
+		if(header != null && header != undefined) {
+			if(!header.classList.contains("top")) {
+				this.style.top = `${header.offsetHeight-1}px`;
+			}
+		}
 	}
 }
 

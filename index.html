@@ -5,8 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Website tools</title>
 
-	<script defer src="./utils.js"></script>
-
 	<link rel="stylesheet" href="./main/body.css">
 	<link rel="stylesheet" href="./main/container/separator.css">
 	<link rel="stylesheet" href="./main/container/main_container.css">
@@ -20,17 +18,18 @@
 	<link rel="stylesheet" href="./content/card/card.css">
 	<link rel="stylesheet" href="./content/media_displayer/media_displayer.css">
 
-
-	<link rel="stylesheet" href="title_screen.css">
-	<link rel="stylesheet" href="image_rack.css">
 	<link rel="stylesheet" href="./popups/popups.css">
 
 	<script defer src="./main/container/main_container.js"></script>
-	<script defer src="./popups/sidebar.js"></script>
 	<script defer src="./main/footer/footer.js"></script>
+	<script defer src="./main/header/header.js"></script>
+
+	<script defer src="./popups/sidebar.js"></script>
+	
 	<script defer src="./content/text_column/text_column.js"></script>
 	<script defer src="./content/card/card.js"></script>
 	<script defer src="./content/media_displayer/media_displayer.js"></script>
+	
 	<script defer src="./adjusting/grid.js"></script>
 </head>
 <body>
@@ -38,17 +37,13 @@
 		<img src="./media/images/body/placeholder_background.png" alt="back">
 	</background>
 
-	<header></header>
+	<!--<header></header>-->
+	<sticky-header></sticky-header>
 
 	<sidebar-fixed
 		main_title="Nothing"
 		class="right"
 	></sidebar-fixed>
-
-	<!--
-	<full-screen-media media="media/images/image rack/rack_5.png" image="true">
-	</full-screen-media>
-	-->
 
 	<!--
 	<popup>
@@ -57,6 +52,7 @@
 	-->
 	
 	<main-container>
+		<!--<header class="top"></header>-->
 		<section>
 			<custom_center>
 				<div style="width: 50vw; height: 60vh;">
@@ -191,6 +187,12 @@
 		<custom_center>
 		</custom_center>
 	</fc-media>
+</template>
+
+<template id="sticky-header-template">
+	<header-sticky>
+		<button>&#8595;</button>
+	</header-sticky>
 </template>
 
 </html>

@@ -9,4 +9,41 @@ header {
   color: white;
   z-index: 1;
   padding: 5px 0 5px 0;
+}
+
+header.top {
+  position: relative;
+}
+
+sticky-header {
+  display: block;
+  position: sticky;
+  transition: top 1s;
+  top: 0;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 7vh;
+  background-color: black;
+  color: white;
+  z-index: 1;
+  padding: 5px 0 5px 0;
+}
+sticky-header button {
+  position: absolute;
+  left: 48%;
+  bottom: -20px;
+  width: 2%;
+  height: 20px;
+  min-width: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  outline: none;
+  border-radius: 0 0 5px 5px;
+  color: white;
+}
+
+sticky-header.open {
+  top: 0;
+  transition: top 1s;
 }/*# sourceMappingURL=header.css.map */
