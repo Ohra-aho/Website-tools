@@ -1,6 +1,7 @@
 
 class MediaDisplayer extends HTMLElement { 
 	family = [];
+	index = 0;
 	constructor() {
 		super();
 	}
@@ -31,6 +32,7 @@ class MediaDisplayer extends HTMLElement {
 		fc_element.setAttribute("media", this.getAttribute("media"));
 		fc_element.setAttribute("image", this.getAttribute("image"));
 		fc_element.family = this.family;
+		fc_element.current_index = this.index;
 		document.body.appendChild(fc_element);
 	}
 
@@ -44,6 +46,9 @@ class MediaDisplayer extends HTMLElement {
 					proto_family[i].getAttribute("family") == this.getAttribute("family")
 				) {
 					this.family.push(proto_family[i].getAttribute("media"));
+					if(proto_family[i] == this) {
+						this.index = i;
+					}
 				}
 			}
 		}
