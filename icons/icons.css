@@ -1,0 +1,13 @@
+ham-icon {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+ham-icon div {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin: 4px 0;
+}/*# sourceMappingURL=icons.css.map */

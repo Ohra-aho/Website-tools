@@ -1,0 +1,52 @@
+@use "../../utils.scss" as *;
+@use "../../colors.scss" as *;
+
+link-list {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	a {
+		text-decoration: none;
+		@include symmetric_margin(5px, "x");
+	}
+
+	button {
+		display: none;
+	}
+}
+
+
+//narrow screen
+@media screen and (max-width: $narrow) {
+	link-list {
+		justify-content: center;
+
+		a {
+			display: none;
+		}
+
+		button {
+			display: block;
+			background-color: transparent;
+			border: none;
+			
+		}
+	}
+}
+
+//medium screen
+@media screen and (min-width: $narrow) and (max-width: $medium) {
+	link-list {
+		justify-content: center;
+
+		a {
+			display: none;
+		}
+	}
+}
+
+//wide screen
+@media screen and (min-width: $medium) and (max-width: $wide) {
+
+}

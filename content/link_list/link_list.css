@@ -1,0 +1,34 @@
+link-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+link-list a {
+  text-decoration: none;
+  margin: 0 5px 0 5px;
+}
+link-list button {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  link-list {
+    justify-content: center;
+  }
+  link-list a {
+    display: none;
+  }
+  link-list button {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1030px) {
+  link-list {
+    justify-content: center;
+  }
+  link-list a {
+    display: none;
+  }
+}/*# sourceMappingURL=link_list.css.map */

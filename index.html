@@ -17,8 +17,11 @@
 	<link rel="stylesheet" href="./content/text_column/text_column.css">
 	<link rel="stylesheet" href="./content/card/card.css">
 	<link rel="stylesheet" href="./content/media_displayer/media_displayer.css">
+	<link rel="stylesheet" href="./content/link_list/link_list.css">
 
 	<link rel="stylesheet" href="./popups/popups.css">
+
+	<link rel="stylesheet" href="./icons/icons.css">
 
 	<script defer src="./main/container/main_container.js"></script>
 	<script defer src="./main/footer/footer.js"></script>
@@ -29,16 +32,29 @@
 	<script defer src="./content/text_column/text_column.js"></script>
 	<script defer src="./content/card/card.js"></script>
 	<script defer src="./content/media_displayer/media_displayer.js"></script>
+	<script defer src="./content/link_list/link_list.js"></script>
 	
 	<script defer src="./adjusting/grid.js"></script>
+
+	<script defer src="./icons/icons.js"></script>
 </head>
 <body>
 	<background>
 		<img src="./media/images/body/placeholder_background.png" alt="back">
 	</background>
 
-	<!--<header></header>-->
-	<sticky-header></sticky-header>
+	<header>
+		<div style="width: 100%; height: 7vh">
+			<custom_center>
+				<link-list>
+					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Link</a>
+					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Link</a>
+					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Link</a>
+				</link-list>
+			</custom_center>
+		</div>
+	</header>
+	<!--<sticky-header></sticky-header>-->
 
 	<sidebar-fixed
 		main_title="Nothing"
@@ -193,6 +209,20 @@
 	<header-sticky>
 		<button>&#8595;</button>
 	</header-sticky>
+</template>
+
+<template id="ham-icon-template">
+	<ham-icon-temp>
+		<div></div>
+		<div></div>
+		<div></div>
+	</ham-icon-temp>
+</template>
+
+<template id="link-list-template">
+	<button>
+		<ham-icon></ham-icon>
+	</button>
 </template>
 
 </html>
