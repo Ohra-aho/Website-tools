@@ -27,7 +27,7 @@ sticky-header {
 	transition: top 1s;
 	@include header_base();
 
-	button {
+	#header-open {
 		position: absolute;
 		left: 48%;
 		bottom: -20px;

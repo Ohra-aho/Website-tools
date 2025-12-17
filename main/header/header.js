@@ -1,3 +1,11 @@
+const sticky_header_template = document.createElement("template");
+sticky_header_template.innerHTML = 
+`
+<header-sticky>
+	<button id="header-open">&#8595;</button>
+</header-sticky>
+`
+
 
 class StickyHeader extends HTMLElement {
 
@@ -7,8 +15,8 @@ class StickyHeader extends HTMLElement {
 
 	connectedCallback() { 
 		const height = this.offsetHeight;
-		let template = document.getElementById("sticky-header-template");
-		this.appendChild(template.content.cloneNode(true));
+		//let template = document.getElementById("sticky-header-template");
+		this.appendChild(sticky_header_template.content.cloneNode(true));
 		let button = this.querySelector("button");
 		button.onclick = this.Open;
 		this.style.top = `-${height}px`;

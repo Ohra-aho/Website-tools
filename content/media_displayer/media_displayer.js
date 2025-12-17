@@ -1,3 +1,13 @@
+const fc_media_template = document.createElement("template");
+fc_media_template.innerHTML = 
+`
+<fc-media>
+	<button>&#x2715;</button>
+	<custom_center>
+	</custom_center>
+</fc-media>
+`
+
 
 class MediaDisplayer extends HTMLElement { 
 	family = [];
@@ -63,8 +73,8 @@ class FullScreenMedia extends HTMLElement {
 	}
 
 	connectedCallback() {
-		const template = document.getElementById("sc-media-template");
-		this.appendChild(template.content.cloneNode(true));
+		//const template = document.getElementById("sc-media-template");
+		this.appendChild(fc_media_template.content.cloneNode(true));
 		const media = this.getAttribute("media");
 		const image = this.getAttribute("image"); //If media is image or not
 		if(image) {

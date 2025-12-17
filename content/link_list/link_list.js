@@ -1,3 +1,14 @@
+const link_list_template = document.createElement("template");
+link_list_template.innerHTML = 
+`
+<ham-list>
+		
+</ham-list>
+<button>
+	<ham-icon></ham-icon>
+</button>
+`
+
 
 class LinkList extends HTMLElement { 
 	links = [];
@@ -10,12 +21,12 @@ class LinkList extends HTMLElement {
 		for(let i = 0; i < this.children.length; i++) {
 			this.links.push(this.children[i]);
 		}
-		const template = document.getElementById("link-list-template");
+		const template = link_list_template.content.cloneNode(true);
 		for(let i = 0; i < this.links.length; i++) {
-			template.content.appendChild(this.links[i]);
-			template.content.children[0].appendChild(this.links[i].cloneNode(true));
+			template.appendChild(this.links[i]);
+			template.children[0].appendChild(this.links[i].cloneNode(true));
 		}
-		this.appendChild(template.content.cloneNode(true));
+		this.appendChild(template.cloneNode(true));
 		this.querySelector("button").onclick = this.OpenList;
 		this.querySelector("ham-list").style.top = `-${this.querySelector("ham-list").offsetHeight}px`;
 	}
