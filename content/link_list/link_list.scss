@@ -5,45 +5,75 @@ link-list {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	position: relative;
+	width: fit-content;
+	height: 100%;
+	background-color: black;
 
 	a {
 		text-decoration: none;
-		@include symmetric_margin(5px, "x");
+		color: white;
+		@include symmetric_margin(10px, "x");
 	}
 
 	button {
 		display: none;
 	}
+
+	ham-list {
+		display: block;
+		position: absolute;
+		background-color: black;
+		width: 100vw;
+		height: fit-content;
+		transition: top 1s;
+		z-index: -1;
+	}
 }
 
+/*link-list.open {
+	ham-list {
+	}
+}*/
 
-//narrow screen
-@media screen and (max-width: $narrow) {
+@mixin narrow_screen() {
 	link-list {
 		justify-content: center;
+		width: 100%;
 
 		a {
 			display: none;
+		}
+
+		ham-list {
+			a {
+				display: block;
+				color: white;
+				width: 100%;
+				padding-left: 5%;
+				@include symmetric_margin(5px, "y");
+			}
 		}
 
 		button {
 			display: block;
 			background-color: transparent;
 			border: none;
-			
+			position: absolute;
+			right: 10px;
+			top: 25%;
 		}
 	}
 }
 
+//narrow screen
+@media screen and (max-width: $narrow) {
+	@include narrow_screen();
+}
+
 //medium screen
 @media screen and (min-width: $narrow) and (max-width: $medium) {
-	link-list {
-		justify-content: center;
-
-		a {
-			display: none;
-		}
-	}
+	@include narrow_screen();
 }
 
 //wide screen

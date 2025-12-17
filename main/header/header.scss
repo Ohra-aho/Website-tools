@@ -9,7 +9,7 @@
 	background-color: $main_color;
 	color: $secondary_color;
 	z-index: 1;
-	@include symmetric_padding(5px, "y");
+	padding-bottom: 5px;
 }
 
 header {

@@ -2,33 +2,80 @@ link-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  background-color: black;
 }
 link-list a {
   text-decoration: none;
-  margin: 0 5px 0 5px;
+  color: white;
+  margin: 0 10px 0 10px;
 }
 link-list button {
   display: none;
 }
+link-list ham-list {
+  display: block;
+  position: absolute;
+  background-color: black;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: top 1s;
+  z-index: -1;
+}
 
+/*link-list.open {
+	ham-list {
+	}
+}*/
 @media screen and (max-width: 500px) {
   link-list {
     justify-content: center;
+    width: 100%;
   }
   link-list a {
     display: none;
+  }
+  link-list ham-list a {
+    display: block;
+    color: white;
+    width: 100%;
+    padding-left: 5%;
+    margin: 5px 0 5px 0;
   }
   link-list button {
     display: block;
     background-color: transparent;
     border: none;
+    position: absolute;
+    right: 10px;
+    top: 25%;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
   link-list {
     justify-content: center;
+    width: 100%;
   }
   link-list a {
     display: none;
+  }
+  link-list ham-list a {
+    display: block;
+    color: white;
+    width: 100%;
+    padding-left: 5%;
+    margin: 5px 0 5px 0;
+  }
+  link-list button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 25%;
   }
 }/*# sourceMappingURL=link_list.css.map */

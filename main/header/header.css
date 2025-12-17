@@ -8,7 +8,7 @@ header {
   background-color: black;
   color: white;
   z-index: 1;
-  padding: 5px 0 5px 0;
+  padding-bottom: 5px;
 }
 
 header.top {
@@ -27,7 +27,7 @@ sticky-header {
   background-color: black;
   color: white;
   z-index: 1;
-  padding: 5px 0 5px 0;
+  padding-bottom: 5px;
 }
 sticky-header button {
   position: absolute;
