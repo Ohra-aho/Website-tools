@@ -20,6 +20,13 @@ class StickyHeader extends HTMLElement {
 		let button = this.querySelector("button");
 		button.onclick = this.Open;
 		this.style.top = `-${height}px`;
+		window.addEventListener("resize", (event) => { 
+			if(!Array.from(this.classList).includes("open")) {
+				const height = this.offsetHeight; 
+				this.style.top = `-${height}px`;
+			}
+			
+		})
 	}
 
 	Open() {
