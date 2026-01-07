@@ -10,6 +10,8 @@ link_list_template.innerHTML =
 `
 
 
+
+
 class LinkList extends HTMLElement { 
 	links = [];
 	constructor() {

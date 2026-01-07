@@ -1,0 +1,91 @@
+@use "../../utils.scss" as *;
+@use "../../colors.scss" as *;
+
+title-card {
+	display: flex;
+	width: 100%;
+	height:	80vh;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	#forward, #back{
+		position: absolute;
+		height: 100%;
+		width: 30px;
+		background-color: rgba(black, 0.5);
+		border: none;
+		z-index: 1;
+		color: white;
+		top: 0;
+	}
+
+	#forward {
+		right: 0;
+	}
+	#back {
+		left: 0; 
+	}
+
+	#forward:hover, #back:hover {
+		background-color: rgba(black, 0.7);
+	}
+
+	content-rack {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		flex-direction: row;
+		scroll-behavior: smooth;
+
+		div {
+			flex: 0 0 100%;
+			position: relative;
+			height: 100%;
+			align-items: center;
+
+			h1 {
+				background-color: rgba(black, 0.5);
+				position: absolute;
+				top: 40%;
+				left: 40%;
+				width: 25%;
+				text-align: center;
+				color: white;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	content-rack::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@mixin narrow_screen() {
+	title-card {
+		height:	30vh;
+	}
+}
+
+//narrow screen
+@media screen and (max-width: $narrow) {
+	@include narrow_screen();
+}
+
+//medium screen
+@media screen and (min-width: $narrow) and (max-width: $medium) {
+	title-card {
+		height:	100vh;
+	}
+}
+
+//wide screen
+@media screen and (min-width: $medium) and (max-width: $wide) {
+
+}
