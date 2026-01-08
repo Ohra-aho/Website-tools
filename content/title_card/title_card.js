@@ -4,7 +4,10 @@ title_card_template.innerHTML =
 <button id="back">&#8592;</button>
 <content-rack></content-rack>
 <button id="forward">&#8594;</button>
+<bubbles></bubbles>
 `
+const bubble_teplate = document.createElement("template");
+bubble_teplate.innerHTML = `<div></div>`
 
 class TitileCard extends HTMLElement { 
 	content = [];
@@ -14,20 +17,41 @@ class TitileCard extends HTMLElement {
 	}
 
 	connectedCallback() { 
+		//Instanciate template
 		for(let i = 0; i < this.children.length; i++) {
 			this.content.push(this.children[i]);
 		}
 		const template = title_card_template.content.cloneNode(true);
+
+		//Add content
 		for(let i = 0; i < this.content.length; i++) {
 			template.children[1].appendChild(this.content[i]);
 		}
 		this.appendChild(template.cloneNode(true));
+		this.AddBubbles(this.children.length);
+
+		//Give onclickc
 		let buttons = this.querySelectorAll("button");
 		buttons[1].onclick = this.Forward;
 		buttons[0].onclick = this.Backward;
+
+		//Adjust to resize
 		window.addEventListener("resize", (event) => {
 			this.children[1].scrollTo(this.index*this.offsetWidth, 0);
 		});
+
+		this.IndicateChosenBubble(0);
+	}
+
+	AddBubbles(amount) {
+		for(let i = 0; i < amount; i++) {
+			const bubble = bubble_teplate.content.cloneNode(true);
+			bubble.firstChild.addEventListener("click", function () {
+				//this.parentElement.parentElement.index = i;
+				this.parentElement.parentElement.SetRack(i);
+			});
+			this.children[3].appendChild(bubble);
+		}
 	}
 
 	Forward() {
@@ -51,7 +75,26 @@ class TitileCard extends HTMLElement {
 			x = index;
 		}
 		this.index = index;
-		rack.scrollLeft += this.offsetWidth*x;
+		rack.scrollLeft = this.offsetWidth*index;
+		this.IndicateChosenBubble(index);
+	}
+
+	SetRack(index) {
+		const rack = this.children[1];
+		this.index = index;
+		rack.scrollLeft = this.offsetWidth*index;
+		this.IndicateChosenBubble(index);
+	}
+
+	IndicateChosenBubble(index) {
+		const bubble_rack = this.children[3];
+		for(let i = 0; i < bubble_rack.children.length; i++) {
+			if(Array.from(bubble_rack.children[i].classList).includes("chosen")) {
+				bubble_rack.children[i].classList.toggle("chosen");
+				break;
+			}
+		}
+		bubble_rack.children[index].classList.toggle("chosen");
 	}
 }
 

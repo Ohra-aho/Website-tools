@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="./content/media_displayer/media_displayer.css">
 	<link rel="stylesheet" href="./content/link_list/link_list.css">
 	<link rel="stylesheet" href="./content/title_card/title_card.css">
+	<link rel="stylesheet" href="./content/contact/contact.css">
 
 	<link rel="stylesheet" href="./popups/popups.css">
 
@@ -35,10 +36,13 @@
 	<script defer src="./content/media_displayer/media_displayer.js"></script>
 	<script defer src="./content/link_list/link_list.js"></script>
 	<script defer src="./content/title_card/title_card.js"></script>
+	<script defer src="./content/contact/contact.js"></script>
+	<script defer src="./content/contact/simple_contact.js"></script>
 	
 	<script defer src="./adjusting/grid.js"></script>
 
 	<script defer src="./icons/icons.js"></script>
+
 </head>
 <body>
 	<background>
@@ -85,23 +89,23 @@
 	<main-container>
 		<!--<header class="top"></header>-->
 		<section>
-			<title-card>				
-					<div>
-						<h1>Title</h1>
-						<img src="./media/images/title_screen/placeholder_title_background.png" alt="title_screen">
-					</div>
-					<div>
-						<h1>Title 2</h1>
-						<img src="./media/images/title_screen/placeholder_title_background.png" alt="title_screen">
-					</div>
-					<div>
-						<h1>Title 3</h1>
-						<img src="./media/images/title_screen/placeholder_title_background.png" alt="title_screen">
-					</div>
-					<div>
-						<h1>Title 4</h1>
-						<img src="./media/images/title_screen/placeholder_title_background.png" alt="title_screen">
-					</div>
+			<title-card>			
+				<div>
+					<h1>Title</h1>
+					<img src="./media/images/title_screen/placeholder_title_background.png" alt="title_screen">
+				</div>
+				<div>
+					<h1>Title 2</h1>
+					<img src="./media/images/title_screen/placeholder_title_background.png" alt="title_screen">
+				</div>
+				<div>
+					<h1>Title 3</h1>
+					<img src="./media/images/title_screen/placeholder_title_background.png" alt="title_screen">
+				</div>
+				<div>
+					<h1>Title 4</h1>
+					<img src="./media/images/title_screen/placeholder_title_background.png" alt="title_screen">
+				</div>
 			</title-card>
 		</section>
 		<separator></separator>
@@ -204,6 +208,23 @@
 					<media-displayer image="true" media="./media/images/image rack/rack_4.png" class="vertical" family="grid"></media-displayer>
 					<media-displayer image="true" media="./media/images/image rack/rack_5.png" class="vertical" family="grid"></media-displayer>
 				</grid-generator>
+			</custom_center>
+		</section>
+		<separator></separator>
+		<section>
+			<custom_center>
+				<contact-form 
+					title="Ota yhteyttä" 
+					name_label="Nimi" 
+					subject_label="Aihe" 
+					message_label="Viesti" 
+					submit_label="Lähetä"></contact-form>
+			</custom_center>
+		</section>
+		<separator></separator>
+		<section>
+			<custom_center>
+				<simple-contact email="no.one@gmail.com" subject="Olisi asiaa">Ota yhteyttä</simple-contact>
 			</custom_center>
 		</section>
 		<separator></separator>

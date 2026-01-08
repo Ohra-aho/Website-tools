@@ -1,0 +1,75 @@
+contact-form {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  width: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+contact-form h2 {
+  width: 90%;
+  text-align: center;
+  border-bottom: black solid 2px;
+}
+contact-form form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 80%;
+  height: 70%;
+}
+contact-form form part {
+  display: block;
+  margin: 5px 0 5px 0;
+}
+contact-form form part label {
+  display: block;
+}
+contact-form form part input {
+  width: 30%;
+}
+contact-form form textarea {
+  min-height: 30vh;
+  max-width: 100%;
+  min-width: 100%;
+  margin: 5px 0 5px 0;
+}
+contact-form form #submit {
+  width: 100px;
+  margin: 5px 0 5px 0;
+}
+
+simple-contact {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+simple-contact a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+  contact-form {
+    width: 90%;
+  }
+  contact-form form {
+    width: 90%;
+  }
+  contact-form form part input {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1030px) {
+  contact-form {
+    width: 90%;
+  }
+  contact-form form {
+    width: 90%;
+  }
+  contact-form form part input {
+    width: 70%;
+  }
+}/*# sourceMappingURL=contact.css.map */

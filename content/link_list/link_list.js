@@ -9,9 +9,6 @@ link_list_template.innerHTML =
 </button>
 `
 
-
-
-
 class LinkList extends HTMLElement { 
 	links = [];
 	constructor() {

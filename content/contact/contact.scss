@@ -1,0 +1,86 @@
+@use "../../utils.scss" as *;
+
+contact-form {
+	display: flex;
+	flex-direction: column;
+	background-color: gray;
+	width: 50%;
+	height: fit-content;
+	justify-content: center;
+	align-items: center;
+
+	h2 {
+		width: 90%;
+		text-align: center;
+		border-bottom: black solid 2px;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		margin: 10px;
+		width: 80%;
+		height: 70%;
+
+		part {
+			display: block;
+			@include symmetric_margin($direction: "y");
+			label {
+				display: block;
+			}
+			input {
+				width: 30%;
+			}
+		}
+
+		textarea {
+			min-height: 30vh;
+			max-width: 100%;
+			min-width: 100%;
+			@include symmetric_margin($direction: "y")
+		}
+
+		#submit {
+			width: 100px;
+			@include symmetric_margin($direction: "y")
+		}
+	}
+}
+
+simple-contact {
+	display: block;
+	width: fit-content;
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+
+//Narrow screen
+
+@mixin narrow_screen() {
+	contact-form {
+		width: 90%;
+		form {
+			width: 90%;
+			part { input { width: 70%; } }
+		}
+	}
+}
+
+//narrow screen
+@media screen and (max-width: $narrow) {
+	@include narrow_screen();
+}
+
+//medium screen
+@media screen and (min-width: $narrow) and (max-width: $medium) {
+	@include narrow_screen();
+}
+
+//wide screen
+@media screen and (min-width: $medium) and (max-width: $wide) {
+
+}
