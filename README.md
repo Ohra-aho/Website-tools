@@ -53,7 +53,7 @@ There are three different versions of header:
 - Sticky header follows user just out of view and can be toggled in and out of view with a button press. <sticky-header>
 
 
-### adjusting
+## adjusting
 Containers which sort their children to desiered format. Such as rows, colmuns and grids.
 
 - row: Displays its children in a row. <row>
@@ -62,10 +62,10 @@ Containers which sort their children to desiered format. Such as rows, colmuns a
 - grid-generator: Creates a grid display with default dimentions of 3 x 3 with 30% x 30% cells. These values can be alteres with "rows"-, "columns"- "width"- and "height"-attributes respectively. <grid-generator>
 
 
-### content
+## content
 More specialized containers to show text and other media. Such as cards and scrollable text columns.
 
-#### card
+### card
 Displays either image and text or just text vertically or horizontally in a small frame.
 
 <card-img>
@@ -79,7 +79,7 @@ Cards inner text defines text displayed in the card.
 If cards classlist includes "horizontal", card will be displayed horizontally.
 If cards classlist includes "right", cards image will be displayed on the right. Use only with "horizontal" class.
 
-#### contact
+### contact
 Has contact- and simple-contact templates.
 
 Contact template displays contact form with few fields. Names for those fields are determined with following attributes:
@@ -99,11 +99,11 @@ Simple-contact displays a mailto-link. Target email and subject of the email can
 
 <simple-contact>
 
-#### link-list
+### link-list
 Displays links placed inside of it in a row. Includes hamburger menu to display links in narrow screens.
 Made to work only with header currently.
 
-#### media-displayer
+### media-displayer
 Displays a video or an image. Will display a fullscreen version of an image when clicked. User can also cycle through other images with same "family"-tag in thisfull screen mode.
 
 Attributes:
@@ -113,7 +113,7 @@ Attributes:
 
 Media displayer with vertical class will be better suited to display media which is taller than it is wider.
 
-#### text-column
+### text-column
 Displays inner text in scrollable or static column.
 
 Attributes:
@@ -122,20 +122,20 @@ Attributes:
 
 Text-column can be made scrollable by using a "scrollable"-class.
 
-#### title-card
+### title-card
 Displays its child divs in a horizontal slide show. Slides can be navigated either with arrow buttons or bubbles at the bottom of the title card.
 
 
-### icons
+## icons
 Templates for icons.
 
 - ham-icon: Hamburger menu icon.
 
 
-### popups
+## popups
 Containers which render on top of everyhting else.
 
-#### sidebar-fixed
+### sidebar-fixed
 Container on the side of the screen which can be slid in and put of view with a button press.
 
 Attributes:
