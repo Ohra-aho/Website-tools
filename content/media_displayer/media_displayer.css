@@ -16,7 +16,7 @@ media-displayer video {
 }
 
 media-displayer:hover {
-  border: 2px solid rgb(148, 148, 148);
+  border: 2px solid white;
 }
 
 media-displayer.vertical {

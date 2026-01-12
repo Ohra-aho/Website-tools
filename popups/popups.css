@@ -3,7 +3,7 @@ sidebar-fixed {
   width: 20vw;
   height: 100vh;
   position: fixed;
-  background-color: rgb(148, 148, 148);
+  background-color: gray;
   z-index: 2;
   top: 0;
 }

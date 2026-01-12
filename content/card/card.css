@@ -1,7 +1,7 @@
 card {
   height: 500px;
   width: 300px;
-  background-color: rgb(148, 148, 148);
+  background-color: gray;
   border-radius: 10px;
   margin: 5px;
   padding: 5px;
@@ -22,7 +22,7 @@ card content {
   padding: 5px;
 }
 card content h3 {
-  border-bottom: 2px solid rgb(148, 148, 148);
+  border-bottom: 2px solid gray;
 }
 
 card.text content {

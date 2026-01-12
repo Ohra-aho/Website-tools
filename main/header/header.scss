@@ -1,13 +1,12 @@
 @use "../../utils.scss" as *;
-@use "../../colors.scss" as *;
 
 @mixin header_base() {
 	top: 0;
 	width: 100vw;
 	height: fit-content;
 	min-height: 7vh;
-	background-color: $main_color;
-	color: $secondary_color;
+	background-color: black;
+	color: white;
 	z-index: 2;
 	padding-bottom: 5px;
 }

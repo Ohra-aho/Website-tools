@@ -1,12 +1,11 @@
 @use "../../utils.scss" as *;
-@use "../../colors.scss" as *;
 
 
 //Cards will need their own dimension logic based on need
 card {
 	height: 500px;
 	width: 300px;
-	background-color: $highlight_color;
+	background-color: gray;
 	border-radius: 10px;
 	margin: 5px;
 	padding: 5px;
@@ -24,12 +23,12 @@ card {
 	content {
 		width: 90%;
 		height: 45%;
-		background-color: $secondary_color;
+		background-color: white;
 		border-radius: 5px;
 		padding: 5px;
 
 		h3 {
-			border-bottom: 2px solid $highlight_color;
+			border-bottom: 2px solid gray;
 		}
 	}
 }
