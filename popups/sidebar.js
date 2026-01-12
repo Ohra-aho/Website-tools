@@ -2,7 +2,6 @@ const sidebar_base = document.createElement("template");
 sidebar_base.innerHTML = 
 `
 <sidebar>
-	<link rel="stylesheet" href="./popups/popups.css"></link>
 	<button id="open_side" onclick="ToggleSideBar(this)"></button>
 	<content>
 		
@@ -10,16 +9,14 @@ sidebar_base.innerHTML =
 </sidebar>
 `
 
-
 class SideBar extends HTMLElement { 
 
 	constructor() {
 		super();
 		const content = this.innerHTML;
-		this.innerHTML = "";
 		let temp = sidebar_base.content.cloneNode(true)
 		temp.querySelector("button").innerHTML = this.MakeButtonName(this.getAttribute("main_title"));
-		temp.querySelector("content").innerHTML = content;
+		temp.querySelector("content").appendChild(content);
 		this.appendChild(temp);
 	}
 

@@ -23,7 +23,6 @@ class GridGenerator extends HTMLElement {
 			child.style.height = "100%";
 			child.style.width = "auto";
 			cell.appendChild(child);
-			//this.children[i].remove();
 			this.appendChild(cell);
 		}
 	}

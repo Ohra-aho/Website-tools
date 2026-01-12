@@ -12,8 +12,6 @@ class FooterList extends HTMLElement {
 
 	constructor() {
 		super();
-		const links = GetArrayAttribute("links", this);
-		console.log(links);
 	}
 
 }

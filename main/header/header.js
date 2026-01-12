@@ -15,7 +15,6 @@ class StickyHeader extends HTMLElement {
 
 	connectedCallback() { 
 		const height = this.offsetHeight;
-		//let template = document.getElementById("sticky-header-template");
 		this.appendChild(sticky_header_template.content.cloneNode(true));
 		let button = this.querySelector("button");
 		button.onclick = this.Open;
