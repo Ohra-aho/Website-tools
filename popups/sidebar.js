@@ -13,10 +13,9 @@ class SideBar extends HTMLElement {
 
 	constructor() {
 		super();
-		const content = this.children[0].cloneNode(true);
 		let temp = sidebar_base.content.cloneNode(true)
 		temp.querySelector("button").innerHTML = this.MakeButtonName(this.getAttribute("main_title"));
-		temp.querySelector("content").appendChild(content);
+		temp.querySelector("content").appendChild(this.children[0]);
 		this.appendChild(temp);
 	}
 
