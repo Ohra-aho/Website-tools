@@ -62,28 +62,6 @@ title-card {
 		overflow-y: hidden;
 		flex-direction: row;
 		scroll-behavior: smooth;
-
-		div {
-			flex: 0 0 100%;
-			position: relative;
-			height: 100%;
-			align-items: center;
-			justify-content: center;
-
-			h1 {
-				background-color: rgba(black, 0.5);
-				position: absolute;
-				top: 40%;
-				left: 38%;
-				width: 25%;
-				text-align: center;
-				color: white;
-			}
-			img {
-				width: 100%;
-				height: auto;
-			}
-		}
 	}
 
 	content-rack::-webkit-scrollbar {

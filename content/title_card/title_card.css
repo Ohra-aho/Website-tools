@@ -56,26 +56,6 @@ title-card content-rack {
   flex-direction: row;
   scroll-behavior: smooth;
 }
-title-card content-rack div {
-  flex: 0 0 100%;
-  position: relative;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-title-card content-rack div h1 {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 40%;
-  left: 38%;
-  width: 25%;
-  text-align: center;
-  color: white;
-}
-title-card content-rack div img {
-  width: 100%;
-  height: auto;
-}
 title-card content-rack::-webkit-scrollbar {
   display: none;
 }
