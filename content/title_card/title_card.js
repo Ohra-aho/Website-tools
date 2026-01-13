@@ -17,18 +17,19 @@ class TitileCard extends HTMLElement {
 	}
 
 	connectedCallback() { 
-		//Instanciate template
+			//Instanciate template
 		for(let i = 0; i < this.children.length; i++) {
 			this.content.push(this.children[i]);
 		}
 		const template = title_card_template.content.cloneNode(true);
+		const child_count = this.children.length;
 
 		//Add content
 		for(let i = 0; i < this.content.length; i++) {
 			template.children[1].appendChild(this.content[i]);
 		}
 		this.appendChild(template.cloneNode(true));
-		this.AddBubbles(this.children.length);
+		this.AddBubbles(child_count);
 
 		//Give onclickc
 		let buttons = this.querySelectorAll("button");
