@@ -17,7 +17,7 @@ class TitileCard extends HTMLElement {
 	}
 
 	connectedCallback() { 
-			//Instanciate template
+		//Instanciate template
 		for(let i = 0; i < this.children.length; i++) {
 			this.content.push(this.children[i]);
 		}
@@ -29,12 +29,17 @@ class TitileCard extends HTMLElement {
 			template.children[1].appendChild(this.content[i]);
 		}
 		this.appendChild(template.cloneNode(true));
-		this.AddBubbles(child_count);
+		if(child_count > 1) this.AddBubbles(child_count);
 
-		//Give onclickc
 		let buttons = this.querySelectorAll("button");
-		buttons[1].onclick = this.Forward;
-		buttons[0].onclick = this.Backward;
+		if(child_count > 1) {
+			//Give onclickc
+			buttons[1].onclick = this.Forward;
+			buttons[0].onclick = this.Backward;
+		} else {
+			buttons[1].remove();
+			buttons[0].remove();
+		}
 
 		//Adjust to resize
 		window.addEventListener("resize", (event) => {
@@ -88,14 +93,16 @@ class TitileCard extends HTMLElement {
 	}
 
 	IndicateChosenBubble(index) {
-		const bubble_rack = this.children[3];
-		for(let i = 0; i < bubble_rack.children.length; i++) {
-			if(Array.from(bubble_rack.children[i].classList).includes("chosen")) {
-				bubble_rack.children[i].classList.toggle("chosen");
-				break;
+		const bubble_rack = this.querySelector("bubbles");
+		if(bubble_rack.children.length > 1) {
+			for(let i = 0; i < bubble_rack.children.length; i++) {
+				if(Array.from(bubble_rack.children[i].classList).includes("chosen")) {
+					bubble_rack.children[i].classList.toggle("chosen");
+					break;
+				}
 			}
+			bubble_rack.children[index].classList.toggle("chosen");
 		}
-		bubble_rack.children[index].classList.toggle("chosen");
 	}
 }
 
