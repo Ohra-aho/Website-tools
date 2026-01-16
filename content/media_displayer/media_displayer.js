@@ -57,7 +57,7 @@ class MediaDisplayer extends HTMLElement {
 				) {
 					this.family.push(proto_family[i].getAttribute("media"));
 					if(proto_family[i] == this) {
-						this.index = i;
+						this.index = this.family.length-1;
 					}
 				}
 			}
