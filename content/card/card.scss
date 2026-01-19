@@ -29,6 +29,16 @@ card {
 
 		h3 {
 			border-bottom: 2px solid gray;
+			margin-bottom: 0;
+		}
+
+		p {
+			height: 75%;
+			overflow-y: scroll;
+			margin-top: 10px;
+		}
+		p::-webkit-scrollbar {
+			display: none;
 		}
 	}
 }
