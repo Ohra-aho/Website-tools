@@ -1,13 +1,12 @@
 card {
-  height: 500px;
-  width: 300px;
   background-color: gray;
   border-radius: 10px;
-  margin: 5px;
   padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  width: 100%;
 }
 card img {
   height: 50%;
@@ -32,8 +31,6 @@ card.text content {
 
 card.horizontal {
   flex-direction: row;
-  height: 300px;
-  width: 500px;
 }
 card.horizontal img {
   height: auto;
