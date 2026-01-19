@@ -18,13 +18,26 @@ link-list button {
 }
 link-list ham-list {
   display: block;
-  position: absolute;
+  position: fixed;
+  top: 0;
   background-color: black;
   width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+link-list ham-list div {
+  width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  transition: top 1s;
-  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+link-list ham-list div button {
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  margin: 10px;
 }
 
 /*link-list.open {
@@ -50,9 +63,6 @@ link-list ham-list {
     display: block;
     background-color: transparent;
     border: none;
-    position: absolute;
-    right: 10px;
-    top: 25%;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
@@ -74,8 +84,5 @@ link-list ham-list {
     display: block;
     background-color: transparent;
     border: none;
-    position: absolute;
-    right: 10px;
-    top: 25%;
   }
 }/*# sourceMappingURL=link_list.css.map */

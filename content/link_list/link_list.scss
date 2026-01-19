@@ -21,12 +21,26 @@ link-list {
 
 	ham-list {
 		display: block;
-		position: absolute;
+		position: fixed;
+		top: 0;
 		background-color: black;
 		width: 100vw;
-		height: fit-content;
-		transition: top 1s;
-		z-index: -1;
+		height: 100vh;
+		z-index: 1;
+		
+		div {
+			width: 100%;
+			height: fit-content;
+			display: flex;
+			align-items: center;
+			justify-content: end;
+			button {
+				color: white;
+				font-weight: bold;
+				font-size: large;
+				margin: 10px;				
+			}
+		}
 	}
 }
 
@@ -58,9 +72,6 @@ link-list {
 			display: block;
 			background-color: transparent;
 			border: none;
-			position: absolute;
-			right: 10px;
-			top: 25%;
 		}
 	}
 }

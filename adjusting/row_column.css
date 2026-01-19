@@ -71,4 +71,9 @@ custom_center {
   row.static {
     flex-direction: row;
   }
+  grid-generator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=row_column.css.map */

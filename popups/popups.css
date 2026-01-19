@@ -99,19 +99,27 @@ popup {
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
   sidebar-fixed {
-    width: 30vw;
+    width: 100vw;
   }
   .right {
-    right: -30vw;
+    right: -100vw;
   }
   .right sidebar button {
     transition: left 1s;
   }
   .left {
-    left: -30vw;
+    left: -100vw;
   }
   .left sidebar button {
     right: 25px;
+    transition: right 1s;
+  }
+  .right.open sidebar button {
+    left: 0;
+    transition: left 1s;
+  }
+  .left.open sidebar button {
+    right: 0;
     transition: right 1s;
   }
 }

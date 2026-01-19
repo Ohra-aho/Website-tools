@@ -133,10 +133,10 @@ popup {
 //medium screen
 @media screen and (min-width: $narrow) and (max-width: $medium) {
 	sidebar-fixed {
-		width: 30vw;
+		width: 100vw;
 	}
 	.right { 
-		right: -30vw; 
+		right: -100vw; 
 		sidebar {
 			button {
 				transition: left 1s;
@@ -144,10 +144,28 @@ popup {
 		}
 	}
 	.left { 
-		left: -30vw; 
+		left: -100vw; 
 		sidebar {
 			button {
 				right: 25px;
+				transition: right 1s;
+			}
+		}
+	}
+
+	.right.open {
+		sidebar {
+			button {
+				left: 0;
+				transition: left 1s;
+			}
+		}
+	}
+
+	.left.open {
+		sidebar {
+			button {
+				right: 0;
 				transition: right 1s;
 			}
 		}
