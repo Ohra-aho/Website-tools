@@ -1,3 +1,5 @@
+@use "./utils.scss" as *;
+
 card-img {
 	height: 500px;
 	width: 300px;
@@ -7,4 +9,68 @@ card-img {
 card-img.horizontal {
 	height: 300px;
 	width: 500px;
+}
+
+#text {
+	width: 50vw; 
+	height: 60vh; 
+	background-color: gray;
+}
+
+#grid {
+	width: 100%;
+	height: 100%;
+		
+	grid-generator {
+		justify-content: center;
+		gap: 5px;
+		padding: 5px;
+
+		media-displayer {
+			width: 500px;
+			height: 300px;
+		}
+	}
+}
+
+//narrow screen
+@media screen and (max-width: $narrow) {
+	card-img.horizontal {
+		height: 500px;
+		width: 300px;
+	}
+
+	#text {
+		width: 80vw; 
+	}
+
+	#grid {
+		width: 100%;
+		height: 100%;
+			
+		grid-generator {
+			justify-content: center;
+			align-items: center;
+			gap: 5px;
+			padding: 5px;
+
+			media-displayer {
+				width: 80vw;
+				height: 30vh;
+			}
+		}
+	}
+}
+
+//medium screen
+@media screen and (min-width: $narrow) and (max-width: $medium) {
+	#text {
+		width: 80vw;
+		height: 90vh; 
+	}
+}
+
+//wide screen
+@media screen and (min-width: $medium) and (max-width: $wide) {
+	
 }

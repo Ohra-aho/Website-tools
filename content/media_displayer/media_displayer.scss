@@ -5,9 +5,6 @@ media-displayer {
 	justify-content: center;
 	align-items: center;
 	
-	width: 300px;
-	height: 500px;
-
 	border: 2px solid white;
 
 	img {
@@ -27,8 +24,6 @@ media-displayer:hover {
 }
 
 media-displayer.vertical {
-	width: 500px;
-	height: 300px;
 
 	img {
 		width: auto;

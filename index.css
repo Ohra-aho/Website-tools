@@ -7,4 +7,54 @@ card-img {
 card-img.horizontal {
   height: 300px;
   width: 500px;
+}
+
+#text {
+  width: 50vw;
+  height: 60vh;
+  background-color: gray;
+}
+
+#grid {
+  width: 100%;
+  height: 100%;
+}
+#grid grid-generator {
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+}
+#grid grid-generator media-displayer {
+  width: 500px;
+  height: 300px;
+}
+
+@media screen and (max-width: 500px) {
+  card-img.horizontal {
+    height: 500px;
+    width: 300px;
+  }
+  #text {
+    width: 80vw;
+  }
+  #grid {
+    width: 100%;
+    height: 100%;
+  }
+  #grid grid-generator {
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+  }
+  #grid grid-generator media-displayer {
+    width: 80vw;
+    height: 30vh;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1030px) {
+  #text {
+    width: 80vw;
+    height: 90vh;
+  }
 }/*# sourceMappingURL=index.css.map */
