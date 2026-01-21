@@ -28,27 +28,41 @@ class MediaDisplayer extends HTMLElement {
 			this.children[0].remove();
 		}
 
+		let content = null;
 		if(image) {
-			let content = document.createElement("img");
-			content.setAttribute("src", media);
-			content.setAttribute("alt", "media");
-			this.appendChild(content);
-			this.onclick = this.OnClick;
+			content = document.createElement("img");
+		} else {
+			content = document.createElement("video");
+			let video = document.createElement("source");
+			let split_media = "video/"+media.split(".");
+			video.src = media;
+			video.type = "video/" + split_media[split_media.length - 1];
+			content.controls = true;
+			content.appendChild(video);
+		}
 
-			//change class to fit the image
-			if(this.children[0].complete) {
+		content.setAttribute("src", media);
+		content.setAttribute("alt", "media");
+		this.appendChild(content);
+		this.onclick = this.OnClick;
+
+		if(!image) {
+			this.classList.add("horizontal");
+		}
+
+		//change class to fit the image
+		if(this.children[0].complete) {
+			if(this.children[0].offsetHeight < this.children[0].offsetWidth) {
+				this.classList.add("horizontal");
+			} else {
+				this.classList.add("vertical");
+			}
+		} else {
+			this.children[0].onload = () => {
 				if(this.children[0].offsetHeight < this.children[0].offsetWidth) {
 					this.classList.add("horizontal");
 				} else {
 					this.classList.add("vertical");
-				}
-			} else {
-				this.children[0].onload = () => {
-					if(this.children[0].offsetHeight < this.children[0].offsetWidth) {
-						this.classList.add("horizontal");
-					} else {
-						this.classList.add("vertical");
-					}
 				}
 			}
 		}
