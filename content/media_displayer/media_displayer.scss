@@ -6,16 +6,6 @@ media-displayer {
 	align-items: center;
 	
 	border: 2px solid white;
-
-	img {
-		width: 100%;
-		height: auto;
-	}
-
-	video {
-		width: 100%;
-		height: auto;
-	}
 }
 
 media-displayer:hover {
@@ -33,6 +23,18 @@ media-displayer.vertical {
 	video {
 		width: auto;
 		height: 100%;
+	}
+}
+
+media-displayer.horizontal {
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	video {
+		width: 100%;
+		height: auto;
 	}
 }
 

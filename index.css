@@ -9,6 +9,11 @@ card-img.horizontal {
   width: 500px;
 }
 
+#text-card {
+  width: 150px;
+  height: 250px;
+}
+
 #text {
   width: 50vw;
   height: 60vh;

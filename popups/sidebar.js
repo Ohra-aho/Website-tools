@@ -29,6 +29,16 @@ class SideBar extends HTMLElement {
 		}
 		return temp;
 	}
+
+	/*ReadjustOnResize() {
+		console.log(this.offsetWidth);
+		if(Array.from(this.classList).includes("right")) {
+			this.style.right = `-${this.offsetWidth}px`;
+		}
+		else if(Array.from(this.classList).includes("left")) {
+			this.style.left = `-${this.offsetWidth}px`;
+		}
+	}*/
 }
 
 customElements.define("sidebar-fixed", SideBar);

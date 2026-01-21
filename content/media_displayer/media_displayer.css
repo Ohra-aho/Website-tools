@@ -4,14 +4,6 @@ media-displayer {
   align-items: center;
   border: 2px solid white;
 }
-media-displayer img {
-  width: 100%;
-  height: auto;
-}
-media-displayer video {
-  width: 100%;
-  height: auto;
-}
 
 media-displayer:hover {
   border: 2px solid white;
@@ -25,6 +17,15 @@ media-displayer.vertical img {
 media-displayer.vertical video {
   width: auto;
   height: 100%;
+}
+
+media-displayer.horizontal img {
+  width: 100%;
+  height: auto;
+}
+media-displayer.horizontal video {
+  width: 100%;
+  height: auto;
 }
 
 full-screen-media {

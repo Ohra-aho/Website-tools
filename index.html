@@ -66,6 +66,7 @@
 	</header>
 	-->
 	
+	
 	<sticky-header>
 		<div style="width: 100%; height: 7vh">
 			<custom_center>
@@ -90,7 +91,7 @@
 		<div style="width: 100px; height: 100px; background-color: brown; position: absolute; left: 50%; top: 50%;"></div>
 	</popup>
 	-->
-	
+
 	<main-container>
 		<!--<header class="top"></header>-->
 		<!--<section>
@@ -114,6 +115,7 @@
 			</title-card>
 		</section>
 		<separator></separator>-->
+		
 		<section>
 			<custom_center>
 				<div id="text">
@@ -179,6 +181,7 @@
 		</section>
 		<separator></separator>
 		<section>
+			<section-title>Kortteja</section-title>
 			<custom_center>
 				<row>
 
@@ -205,7 +208,7 @@
 						Something else over here. Propably something even more important.
 					</card-img>
 
-					<card-img title="Jotain">Jotain tosi tärkeää.</card-img>
+					<card-img title="Jotain" id="text-card">Jotain tosi tärkeää.</card-img>
 				</row>
 			</custom_center>
 		</section>
@@ -226,14 +229,25 @@
 		<section>
 			<custom_center id="grid">
 				<grid-generator>
-					<media-displayer image="true" media="./media/images/image rack/rack_1.png" class="vertical" family="grid"></media-displayer>
-					<media-displayer image="true" media="./media/images/image rack/rack_2.png" class="vertical" family="grid"></media-displayer>
-					<media-displayer image="true" media="./media/images/image rack/rack_3.png" class="vertical" family="grid"></media-displayer>
-					<media-displayer image="true" media="./media/images/image rack/rack_4.png" class="vertical" family="grid"></media-displayer>
-					<media-displayer image="true" media="./media/images/image rack/rack_5.png" class="vertical" family="grid"></media-displayer>
+					<media-displayer image="true" media="./media/images/grid/Arthur.jpg" family="a"></media-displayer>
+					<media-displayer image="true" media="./media/images/header/placeholder_logo.png" family="grid"></media-displayer>
+					<media-displayer image="true" media="./media/images/image rack/rack_3.png" family="grid"></media-displayer>
+					<media-displayer image="true" media="./media/images/image rack/rack_4.png" family="grid"></media-displayer>
+					<media-displayer image="true" media="./media/images/image rack/rack_5.png" family="grid"></media-displayer>
 				</grid-generator>
 			</custom_center>
 		</section>
+		<separator></separator>
+		
+		<section>
+			<custom_center id="grid">
+				<grid-generator>
+					<media-displayer image="true" media="./media/images/grid/kelervo.jpg" class="vertical" family="a"></media-displayer>
+					<media-displayer image="true" media="./media/images/grid/nyrrajag.jpg" class="vertical" family="a"></media-displayer>
+				</grid-generator>
+			</custom_center>
+		</section>
+		
 		<!--<separator></separator>
 		<section>
 			<custom_center>
@@ -245,6 +259,7 @@
 					submit_label="Lähetä"></contact-form>
 			</custom_center>
 		</section>-->
+	
 		<separator></separator>
 		<section>
 			<custom_center>
@@ -257,6 +272,7 @@
 				<p>Copyright No-one. All rights reserved.</p>
 			</copyright>
 		</footer>
+
 	</main-container>
 
 </body>

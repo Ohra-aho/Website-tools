@@ -25,13 +25,11 @@ class GridGenerator extends HTMLElement {
 		`;
 
 		window.addEventListener("resize", () => {
-			console.log("Que")
+			this.cell_width = this.children[0].offsetWidth;
+			this.cell_height = this.children[0].offsetHeight;
 			const parent_width = this.parentElement.offsetWidth;
-			console.log(parent_width);
 			const columns = Math.floor(parent_width / this.cell_width);
 			const rows = Math.floor(this.children.length / columns);
-			console.log(columns);
-			console.log(rows);
 
 			this.style = 
 			`
