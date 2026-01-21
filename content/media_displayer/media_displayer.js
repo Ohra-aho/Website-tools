@@ -108,13 +108,28 @@ class FullScreenMedia extends HTMLElement {
 		this.appendChild(fc_media_template.content.cloneNode(true));
 		const media = this.getAttribute("media");
 		const image = this.getAttribute("image"); //If media is image or not
+
+		let content = null;
+		if(image) {
+			content = document.createElement("img");
+		} else {
+			//Palataan tähän
+			/*content = document.createElement("video");
+			let video = document.createElement("source");
+			let split_media = "video/"+media.split(".");
+			video.src = media;
+			video.type = "video/" + split_media[split_media.length - 1];
+			content.controls = true;
+			content.appendChild(video);*/
+		}
+
 		if(image) {
 			let content = document.createElement("img");
 			content.setAttribute("src", media);
 			content.setAttribute("alt", "media");
 			this.children[0].children[1].appendChild(content);
 			this.children[0].children[0].onclick = this.Close;
-		}
+		} 
 
 		if(this.family.length > 0) {
 			this.AdjustForFamily();
