@@ -51,7 +51,7 @@ link-list {
 
 @mixin narrow_screen() {
 	link-list {
-		justify-content: center;
+		justify-content: end;
 		width: 100%;
 
 		a {
@@ -72,6 +72,7 @@ link-list {
 			display: block;
 			background-color: transparent;
 			border: none;
+			margin-right: 10px;
 		}
 	}
 }
