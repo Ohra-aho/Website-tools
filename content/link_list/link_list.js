@@ -18,6 +18,7 @@ ham_list_temp.innerHTML =
 
 class LinkList extends HTMLElement { 
 	links = [];
+
 	constructor() {
 		super();
 	}

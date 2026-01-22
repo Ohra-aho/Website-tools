@@ -25,6 +25,8 @@
 
 	<link rel="stylesheet" href="./icons/icons.css">
 
+	<link rel="stylesheet" href="./language/language_toggler.css">
+
 	<script defer src="./main/container/main_container.js"></script>
 	<script defer src="./main/footer/footer.js"></script>
 	<script defer src="./main/header/header.js"></script>
@@ -43,11 +45,15 @@
 
 	<script defer src="./icons/icons.js"></script>
 
+	<script defer src="./language/language_toggler.js"></script>
+	<script defer src="./language/language.js"></script>
+
 
 	<!-- Other links -->
 	<link rel="stylesheet" href="./index.css">
 </head>
 <body>
+
 	<background>
 		<img src="./media/images/body/placeholder_background.png" alt="back">
 	</background>
@@ -70,10 +76,14 @@
 	<sticky-header>
 		<div style="width: 100%; height: 7vh">
 			<custom_center>
+				<language-toggler languages="suomi english"></language-toggler>
 				<link-list>
-					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Link</a>
-					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Link</a>
-					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Link</a>
+					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Linkki</a>
+					<language-changer>Link</language-changer>
+					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Jonnekkin</a>
+					<language-changer>Somewhere</language-changer>
+					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Ehkä</a>
+					<language-changer>Maybe</language-changer>
 				</link-list>
 			</custom_center>
 		</div>
