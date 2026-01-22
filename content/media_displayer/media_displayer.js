@@ -44,7 +44,7 @@ class MediaDisplayer extends HTMLElement {
 		content.setAttribute("src", media);
 		content.setAttribute("alt", "media");
 		this.appendChild(content);
-		this.onclick = this.OnClick;
+		if(image) { this.onclick = this.OnClick; }
 
 		if(!image) {
 			this.classList.add("horizontal");
@@ -81,14 +81,17 @@ class MediaDisplayer extends HTMLElement {
 		if(this.getAttribute("family") != null) {
 			let proto_family = document.getElementsByTagName("media-displayer");
 
-			for(let i = 0; i < proto_family.length; i++) {
-				if(
-					proto_family[i].getAttribute("family") != null && 
-					proto_family[i].getAttribute("family") == this.getAttribute("family")
-				) {
-					this.family.push(proto_family[i].getAttribute("media"));
-					if(proto_family[i] == this) {
-						this.index = this.family.length-1;
+			if(this.querySelector("video") == null) {
+				for(let i = 0; i < proto_family.length; i++) {
+					if(
+						proto_family[i].getAttribute("family") != null && 
+						proto_family[i].getAttribute("family") == this.getAttribute("family") &&
+						proto_family[i].querySelector("video") == null
+					) {
+						this.family.push(proto_family[i].getAttribute("media"));
+						if(proto_family[i] == this) {
+							this.index = this.family.length-1;
+						}
 					}
 				}
 			}
@@ -112,15 +115,6 @@ class FullScreenMedia extends HTMLElement {
 		let content = null;
 		if(image) {
 			content = document.createElement("img");
-		} else {
-			//Palataan tähän
-			/*content = document.createElement("video");
-			let video = document.createElement("source");
-			let split_media = "video/"+media.split(".");
-			video.src = media;
-			video.type = "video/" + split_media[split_media.length - 1];
-			content.controls = true;
-			content.appendChild(video);*/
 		}
 
 		if(image) {
