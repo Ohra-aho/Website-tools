@@ -1,5 +1,14 @@
 @use "./utils.scss" as *;
 
+body {
+	background {
+		background-image: url("./media/images/body/placeholder_background.png");
+		img {
+			display: none;
+		}
+	}
+}
+
 card-img {
 	height: 500px;
 	width: 300px;
