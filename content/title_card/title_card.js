@@ -7,7 +7,7 @@ title_card_template.innerHTML =
 <bubbles></bubbles>
 `
 const bubble_teplate = document.createElement("template");
-bubble_teplate.innerHTML = `<div></div>`
+bubble_teplate.innerHTML = `<bubble></bubble>`
 
 class TitileCard extends HTMLElement { 
 	content = [];

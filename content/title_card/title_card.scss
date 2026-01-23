@@ -41,7 +41,8 @@ title-card {
 		justify-content: center;
 		@include symmetric_padding($direction: "y");
 		
-		div {
+		bubble {
+			display: block;
 			background-color: rgba(black, 0.3);
 			width: 15px;
 			height: 15px;
@@ -49,7 +50,7 @@ title-card {
 			@include symmetric_margin();
 		}
 
-		div.chosen {
+		bubble.chosen {
 			background-color: rgba(black, 0.7);
 		}
 	}

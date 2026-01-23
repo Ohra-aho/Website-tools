@@ -37,14 +37,15 @@ title-card bubbles {
   justify-content: center;
   padding: 5px 0 5px 0;
 }
-title-card bubbles div {
+title-card bubbles bubble {
+  display: block;
   background-color: rgba(0, 0, 0, 0.3);
   width: 15px;
   height: 15px;
   border-radius: 50%;
   margin: 0 5px 0 5px;
 }
-title-card bubbles div.chosen {
+title-card bubbles bubble.chosen {
   background-color: rgba(0, 0, 0, 0.7);
 }
 title-card content-rack {

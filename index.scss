@@ -47,6 +47,29 @@ card-img.horizontal {
 	}
 }
 
+title-card {
+	div {
+		position: relative;
+		flex: 0 0 100%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		h1 {
+			width: 40%;
+			height: fit-content;
+			padding: 5px;
+			background-color: rgba(black, 0.5);
+			position: absolute;
+			left: 30%;
+			top: 40%;
+			text-align: center;
+			color: white;
+		}
+	}
+}
+
 
 //narrow screen
 @media screen and (max-width: $narrow) {

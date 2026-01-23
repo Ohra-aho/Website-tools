@@ -41,6 +41,27 @@ card-img.horizontal {
   height: 300px;
 }
 
+title-card div {
+  position: relative;
+  flex: 0 0 100%;
+}
+title-card div img {
+  width: 100%;
+  height: auto;
+}
+title-card div h1 {
+  width: 40%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 30%;
+  top: 40%;
+  text-align: center;
+  color: white;
+}
+
 @media screen and (max-width: 500px) {
   card-img.horizontal {
     height: 500px;

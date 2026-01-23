@@ -32,7 +32,6 @@ class LanguageToggler extends HTMLElement {
 
 	ChangeLanguage() {
 		const l_cs = document.querySelectorAll("language-changer");
-		console.log(l_cs.length);
 		for(let i = 0; i < l_cs.length; i++) {
 			l_cs[i].ChangeLanguage();
 		}
@@ -43,6 +42,7 @@ class LanguageToggler extends HTMLElement {
 		}
 		this.current_language = this.languages[current_index];
 		this.children[0].innerHTML = this.current_language;
+		window.sessionStorage.setItem("language", this.current_language);
 	}
 
 	CollectLanguages() {
