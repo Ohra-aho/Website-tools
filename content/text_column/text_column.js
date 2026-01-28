@@ -28,8 +28,6 @@ class TextColumn extends HTMLElement {
 	}
 
 	ChangeLanguage(title, content) {
-		console.log(title)
-		console.log(content)
 		if(title != "") {
 			let h1 = this.children[0]
 			h1.innerText = title;

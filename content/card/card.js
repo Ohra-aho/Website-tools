@@ -9,6 +9,7 @@ card_template.innerHTML =
 `
 
 class Card extends HTMLElement { 
+	og_content
 	constructor() {
 		super();
 	}
@@ -22,11 +23,11 @@ class Card extends HTMLElement {
 		const horizontal = Array.from(this.classList).includes("horizontal");
 		const right = Array.from(this.classList).includes("right");
 
-		const content = this.innerText;
+		this.og_content = this.innerText;
 		this.innerText = "";
 
 		//Place content
-		card.querySelector("p").innerText = content ?? "Placeholder text";
+		card.querySelector("p").innerText = this.og_content ?? "Placeholder text";
 		card.querySelector("h3").innerText = title ?? "Title";
 
 		if(image != null) { 
@@ -45,15 +46,21 @@ class Card extends HTMLElement {
 		}
 
 		this.appendChild(card);
+
+		this.setAttribute("custom", "Y");
 	}
 
 
-	ChangeLanguage() {
-
+	ChangeLanguage(title, content) {
+		this.querySelector("p").innerText = content;
+		this.querySelector("h3").innerText = title;
 	}
 
 	GiveBaseLanguage() {
-
+		return [
+			this.getAttribute("title"),
+			this.og_content
+		]
 	}
 }
 
