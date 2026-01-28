@@ -44,6 +44,13 @@ class SideBar extends HTMLElement {
 	ChangeLanguage(title, content) {
 		this.querySelector("button").innerHTML = this.MakeButtonName(title);
 	}
+
+	GiveBaseLanguage() {
+		return [
+			this.getAttribute("title") ?? "",
+			""
+		]
+	}
 }
 
 customElements.define("sidebar-fixed", SideBar);

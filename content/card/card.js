@@ -4,13 +4,8 @@ card_template.innerHTML =
 <card>
 	<img src="./media/images/header/placeholder_logo.png" alt="image">
 	<content>
-		<h3>Title</h3>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-			Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
-			Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
-			Excepturi quo repellat consequatur nisi.
-		</p>
+		<h3></h3>
+		<p></p>
 	</content>
 </card>
 `
@@ -21,7 +16,6 @@ class Card extends HTMLElement {
 	}
 
 	connectedCallback() { 
-		//const template = document.getElementById("card-template");
 		let card = card_template.content.cloneNode(true);
 
 		//Get content
@@ -55,6 +49,14 @@ class Card extends HTMLElement {
 		this.appendChild(card);
 	}
 
+
+	ChangeLanguage() {
+
+	}
+
+	GiveBaseLanguage() {
+
+	}
 }
 
 customElements.define("card-img", Card);
