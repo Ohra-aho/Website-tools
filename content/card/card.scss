@@ -3,89 +3,86 @@
 
 //Cards will need their own dimension logic based on need
 card-img {
-	display: block;
-	card {
-		background-color: gray;
-		border-radius: 10px;
+	background-color: gray;
+	border-radius: 10px;
+	padding: 5px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	height: 100%;
+	width: 100%;
+
+	img {
+		height: 50%;
+		width: auto;
+		margin: 5px;
+	}
+
+	content {
+		width: 90%;
+		height: 45%;
+		background-color: white;
+		border-radius: 5px;
 		padding: 5px;
 
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		h3 {
+			border-bottom: 2px solid gray;
+			margin-bottom: 0;
+		}
 
+		p {
+			height: 75%;
+			overflow-y: scroll;
+			margin-top: 10px;
+		}
+		p::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
+
+card-img.text {
+	content {
 		height: 100%;
-		width: 100%;
+		width: 95%;
+	}
+}
+
+card-img.horizontal {
+	flex-direction: row;
+
+	img {
+		height: auto;
+		width: 50%;
+	}
+
+	content {
+		width: 45%;
+		height: 90%;
+	}
+}
+
+
+
+//narrow screen
+@media screen and (max-width: $narrow) {
+	card-img.horizontal {
+		flex-direction: column;
 
 		img {
 			height: 50%;
 			width: auto;
-			margin: 5px;
 		}
 
 		content {
 			width: 90%;
 			height: 45%;
-			background-color: white;
-			border-radius: 5px;
-			padding: 5px;
-
-			h3 {
-				border-bottom: 2px solid gray;
-				margin-bottom: 0;
-			}
-
-			p {
-				height: 75%;
-				overflow-y: scroll;
-				margin-top: 10px;
-			}
-			p::-webkit-scrollbar {
-				display: none;
-			}
-		}
-	}
-
-	card.text {
-		content {
-			height: 100%;
-			width: 95%;
-		}
-	}
-
-	card.horizontal {
-		flex-direction: row;
-
-		img {
-			height: auto;
-			width: 50%;
-		}
-
-		content {
-			width: 45%;
-			height: 90%;
 		}
 	}
 }
 
-
-//narrow screen
-@media screen and (max-width: $narrow) {
-	card-img {
-		card.horizontal {
-			flex-direction: column;
-
-			img {
-				height: 50%;
-				width: auto;
-			}
-
-			content {
-				width: 90%;
-				height: 45%;
-			}
-		}
-	}
-}
 
 //medium screen
 @media screen and (min-width: $narrow) and (max-width: $medium) {

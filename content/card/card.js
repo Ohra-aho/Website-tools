@@ -1,13 +1,11 @@
 const card_template = document.createElement("template");
 card_template.innerHTML = 
 `
-<card>
 	<img src="./media/images/header/placeholder_logo.png" alt="image">
 	<content>
 		<h3></h3>
 		<p></p>
 	</content>
-</card>
 `
 
 class Card extends HTMLElement { 
@@ -35,15 +33,15 @@ class Card extends HTMLElement {
 			card.querySelector("img").setAttribute("src", image);
 		} else {
 			card.querySelector("img").remove();
-			card.firstElementChild.classList.add("text");
+			this.classList.add("text");
 		}
 
 		if(horizontal) {
-			card.firstElementChild.classList.add("horizontal");
+			this.classList.add("horizontal");
 		}
 		
 		if(right) {
-			card.firstElementChild.appendChild(card.querySelector("img"));
+			card.appendChild(card.querySelector("img"));
 		}
 
 		this.appendChild(card);

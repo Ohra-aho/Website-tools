@@ -1,7 +1,4 @@
 card-img {
-  display: block;
-}
-card-img card {
   background-color: gray;
   border-radius: 10px;
   padding: 5px;
@@ -11,55 +8,57 @@ card-img card {
   height: 100%;
   width: 100%;
 }
-card-img card img {
+card-img img {
   height: 50%;
   width: auto;
   margin: 5px;
 }
-card-img card content {
+card-img content {
   width: 90%;
   height: 45%;
   background-color: white;
   border-radius: 5px;
   padding: 5px;
 }
-card-img card content h3 {
+card-img content h3 {
   border-bottom: 2px solid gray;
   margin-bottom: 0;
 }
-card-img card content p {
+card-img content p {
   height: 75%;
   overflow-y: scroll;
   margin-top: 10px;
 }
-card-img card content p::-webkit-scrollbar {
+card-img content p::-webkit-scrollbar {
   display: none;
 }
-card-img card.text content {
+
+card-img.text content {
   height: 100%;
   width: 95%;
 }
-card-img card.horizontal {
+
+card-img.horizontal {
   flex-direction: row;
 }
-card-img card.horizontal img {
+card-img.horizontal img {
   height: auto;
   width: 50%;
 }
-card-img card.horizontal content {
+card-img.horizontal content {
   width: 45%;
   height: 90%;
 }
 
 @media screen and (max-width: 500px) {
-  card-img card.horizontal {
+  card-img.horizontal {
     flex-direction: column;
   }
-  card-img card.horizontal img {
+  card-img.horizontal img {
     height: 50%;
     width: auto;
   }
-  card-img card.horizontal content {
+  card-img.horizontal content {
     width: 90%;
     height: 45%;
   }
