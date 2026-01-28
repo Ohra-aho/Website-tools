@@ -71,7 +71,7 @@ class LanguageToggler extends HTMLElement {
 	}
 
 	CollectLanguages() {
-		const proto_languages = this.getAttribute("languages");
+		const proto_languages = document.querySelector("languages").getAttribute("languages");
 		this.languages = proto_languages.split(" ");
 	}
 
