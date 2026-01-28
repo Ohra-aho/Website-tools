@@ -26,7 +26,7 @@ class Language extends HTMLElement {
 			this.text.push(
 				new LanguageOption(
 					document.querySelector("languages").getAttribute("languages").split(" ")[0],
-					this.target_element.innerHTML, 
+					this.target_element.innerText, 
 					this.target_element.getAttribute("title")
 				)
 			);
@@ -47,7 +47,7 @@ class Language extends HTMLElement {
 			this.text.push(
 				new LanguageOption(
 					this.children[i].getAttribute("name"), 
-					this.children[i].innerHTML, 
+					this.children[i].innerText, 
 					this.children[i].getAttribute("title")
 				)
 			);
@@ -62,13 +62,6 @@ class Language extends HTMLElement {
 		if(this.target_element.getAttribute("custom") != "Y") {
 			for(let i = 0; i < this.text.length; i++) {
 				if(this.current_language == this.text[i].name) {
-					
-					/* I believe this part if useless
-					if(this.target_element.getAttribute("title") && this.text[i].title != null) { 
-						this.target_element.setAttribute("title", this.text[i].title)
-					}
-					*/
-
 					this.target_element.innerText = this.text[i].text;
 					break;
 				}
