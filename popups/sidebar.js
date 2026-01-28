@@ -1,25 +1,32 @@
 const sidebar_base = document.createElement("template");
 sidebar_base.innerHTML = 
 `
-<sidebar>
-	<button id="open_side" onclick="ToggleSideBar(this)"></button>
-	<content>
-		
-	</content>
-</sidebar>
+<button id="open_side" ></button>
+<content>
+	
+</content>
 `
 
 class SideBar extends HTMLElement { 
 
 	constructor() {
 		super();
-		let temp = sidebar_base.content.cloneNode(true)
-		temp.querySelector("button").innerHTML = this.MakeButtonName(this.getAttribute("main_title"));
+	}
+
+	connectedCallback() {
+		let temp = sidebar_base.content.cloneNode(true);
+		let button = temp.querySelector("button");
+		button.innerHTML = this.MakeButtonName(this.getAttribute("title"));
+		button.addEventListener("click", function (e) {
+			this.parentElement.classList.toggle("open");
+		});
+		
 		const length = this.children.length;
 		for(let i = 0; i < length; i++) {
 			temp.querySelector("content").appendChild(this.children[0]);
 		}
 		this.appendChild(temp);
+		this.setAttribute("custom", "Y")
 	}
 
 	MakeButtonName(name) {
@@ -30,15 +37,13 @@ class SideBar extends HTMLElement {
 		return temp;
 	}
 
-	/*ReadjustOnResize() {
-		console.log(this.offsetWidth);
-		if(Array.from(this.classList).includes("right")) {
-			this.style.right = `-${this.offsetWidth}px`;
-		}
-		else if(Array.from(this.classList).includes("left")) {
-			this.style.left = `-${this.offsetWidth}px`;
-		}
-	}*/
+	ToggleSideBar() {
+		this.classList.toggle("open");
+	}
+
+	ChangeLanguage(title, content) {
+		this.querySelector("button").innerHTML = this.MakeButtonName(title);
+	}
 }
 
 customElements.define("sidebar-fixed", SideBar);
@@ -46,10 +51,7 @@ customElements.define("sidebar-fixed", SideBar);
 
 //Interaction functions
 
-function ToggleSideBar(btn) {
-	let sidebar = btn.parentElement;
-	sidebar.parentElement.classList.toggle("open");
-}
+
 
 //target: class to be worked with
 //name: tag in which true content needs to be pasted

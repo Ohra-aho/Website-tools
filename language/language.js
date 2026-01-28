@@ -21,7 +21,6 @@ class Language extends HTMLElement {
 	connectedCallback() {
 		this.FindTargetElement();
 		this.current_language = this.getAttribute("default_language");
-
 		this.text.push(
 			new LanguageOption(
 				this.getAttribute("default_language"), 
@@ -44,15 +43,23 @@ class Language extends HTMLElement {
 
 	ChangeLanguage(language) {
 		this.current_language = language;
-		console.log(this.current_language +" "+this.text.length);
-		for(let i = 0; i < this.text.length; i++) {
-			if(this.current_language == this.text[i].name) {
-				if(this.target_element.getAttribute("title") && this.text[i].title != null) { 
-					this.target_element.setAttribute("title", this.text[i].title)
-				}
 
-				this.target_element.innerText = this.text[i].text;
-				break;
+		if(this.target_element.getAttribute("custom") != "Y") {
+			for(let i = 0; i < this.text.length; i++) {
+				if(this.current_language == this.text[i].name) {
+					if(this.target_element.getAttribute("title") && this.text[i].title != null) { 
+						this.target_element.setAttribute("title", this.text[i].title)
+					}
+
+					this.target_element.innerText = this.text[i].text;
+					break;
+				}
+			}
+		} else {
+			for(let i = 0; i < this.text.length; i++) {
+				if(this.current_language == this.text[i].name) {
+					this.target_element.ChangeLanguage(this.text[i].title, this.text[i].text)
+				}
 			}
 		}
 	}
