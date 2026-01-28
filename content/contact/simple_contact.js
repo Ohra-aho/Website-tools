@@ -23,23 +23,42 @@ class SimpleContact extends HTMLElement {
 			this.children[0].innerHTML = name;
 		}
 		if(email != null) {
-			let original_href = this.children[0].getAttribute("href");
+			let original_href = "mailto:";
 			this.children[0].setAttribute("href", `${original_href}${email}`);
 		}
 		if(subject != null) {
-			let original_href = this.children[0].getAttribute("href");
-			const split_subject = subject.split(" ");
-			let complete_subject = "";
-			for(let i = 0; i < split_subject.length; i++) {
-				if(i == split_subject.length-1) {
-					complete_subject += split_subject[i];
-				} else {
-					complete_subject += split_subject[i]+"%20";
-				}
-			}
-
-			this.children[0].setAttribute("href", `${original_href}?subject=${complete_subject}`)
+			this.SetSubject(subject)
 		}
+
+		this.setAttribute("custom", "Y")
+	}
+
+	SetSubject(base_string) {
+		let original_href = "mailto:";
+		const split_string = base_string.split(" ");
+		let complete_string = "";
+		for(let i = 0; i < split_string.length; i++) {
+			if(i == split_string.length-1) {
+				complete_string += split_string[i];
+			} else {
+				complete_string += split_string[i]+"%20";
+			}
+		}
+
+		this.children[0].setAttribute("href", `${original_href}?subject=${complete_string}`)
+	}
+
+	ChangeLanguage(title, content) {
+		this.children[0].innerHTML = content;
+		console.log(title)
+		this.SetSubject(title);
+	}
+
+	GiveBaseLanguage() {
+		return [
+			this.getAttribute("subject"),
+			this.children[0].innerHTML
+		]
 	}
 }
 
