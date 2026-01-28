@@ -22,10 +22,10 @@ class Language extends HTMLElement {
 		this.FindTargetElement();
 		this.current_language = this.getAttribute("default_language");
 
-		if(!this.target_element.getAttribute("custom", "Y")) {
+		if(!this.target_element.getAttribute("custom")) {
 			this.text.push(
 				new LanguageOption(
-					this.getAttribute("default_language"), 
+					document.querySelector("language-toggler").languages[0],
 					this.target_element.innerHTML, 
 					this.target_element.getAttribute("title")
 				)
@@ -35,7 +35,7 @@ class Language extends HTMLElement {
 			const target_content = this.target_element.GiveBaseLanguage();
 			this.text.push(
 				new LanguageOption(
-					this.getAttribute("default_language"),
+					document.querySelector("language-toggler").languages[0],
 					target_content[1] ?? "",
 					target_content[0] ?? ""
 				)

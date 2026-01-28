@@ -50,7 +50,6 @@ class SimpleContact extends HTMLElement {
 
 	ChangeLanguage(title, content) {
 		this.children[0].innerHTML = content;
-		console.log(title)
 		this.SetSubject(title);
 	}
 
