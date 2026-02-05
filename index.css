@@ -62,6 +62,16 @@ title-card div h1 {
   color: white;
 }
 
+#list {
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+}
+#list .sub {
+  margin: 5px;
+  border: 1px solid white;
+}
+
 @media screen and (max-width: 500px) {
   card-img.horizontal {
     height: 500px;

@@ -21,10 +21,12 @@ sidebar-fixed button p {
   margin: 0;
 }
 sidebar-fixed content {
+  position: relative;
   display: block;
   height: 100%;
-  width: 100%;
+  width: 90%;
   overflow-y: scroll;
+  margin: 5px;
 }
 
 content::-webkit-scrollbar {
@@ -37,6 +39,9 @@ content::-webkit-scrollbar {
 }
 .right button {
   left: -25px;
+}
+.right content {
+  left: 10%;
 }
 
 .left {

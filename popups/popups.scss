@@ -26,10 +26,12 @@ sidebar-fixed {
 	}
 
 	content {
+		position: relative;
 		display: block;
 		height: 100%;
-		width: 100%;
+		width: 90%;
 		overflow-y: scroll;
+		margin: 5px;
 	}
 	
 }
@@ -44,6 +46,10 @@ content::-webkit-scrollbar {
 
 	button {
 		left: -25px;
+	}
+	
+	content {
+		left: 10%;
 	}
 }
 
