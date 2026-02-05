@@ -23,11 +23,11 @@ class Card extends HTMLElement {
 		const horizontal = Array.from(this.classList).includes("horizontal");
 		const right = Array.from(this.classList).includes("right");
 
-		this.og_content = this.innerText;
-		this.innerText = "";
+		this.og_content = this.innerHTML;
+		this.innerHTML = "";
 
 		//Place content
-		card.querySelector("p").innerText = this.og_content ?? "Placeholder text";
+		card.querySelector("p").innerHTML = this.og_content ?? "Placeholder text";
 		card.querySelector("h3").innerText = title ?? "Title";
 
 		if(image != null) { 
